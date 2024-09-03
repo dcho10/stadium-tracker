@@ -17,6 +17,8 @@ user flow:
 future developments:
 - add photo to confirm/share that they have visited a stadium
 - be able to share with other users their progress
+- track the number of times visited
+- user ratings of each stadium visited
 
 database:
 - user database with saved progress on visited stadiums
