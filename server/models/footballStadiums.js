@@ -4,6 +4,10 @@ const stadiumBaseSchema = require("./stadiumBase");
 
 const footballSchema = new Schema({
     ...stadiumBaseSchema.obj,
+    conference: {
+        type: String,
+        enum: ["AFC", "NFC"],
+    }
 });
 
 

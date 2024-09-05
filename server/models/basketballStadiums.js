@@ -4,6 +4,10 @@ const stadiumBaseSchema = require("./stadiumBase");
 
 const basketballSchema = new Schema({
     ...stadiumBaseSchema.obj,
+    conference: {
+        type: String,
+        enum: ["Eastern", "Western"],
+    }
 });
 
 
