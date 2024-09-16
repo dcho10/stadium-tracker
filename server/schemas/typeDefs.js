@@ -45,7 +45,7 @@ const typeDefs = `
 
     type NFLStadium implements Stadium {
         _id: ID
-        stadiumName: String
+        name: String
         team: String
         city: String
         state: String

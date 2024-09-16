@@ -1,0 +1,242 @@
+[
+    {
+        "stadiumName": "Chase Field",
+        "teamName": "Arizona Diamondbacks",
+        "cityName": "Phoenix",
+        "stateName": "AZ",
+        "league": "NL",
+        "division": "NL West"
+    },
+    {
+        "stadiumName": "Truist Park",
+        "teamName": "Atlanta Braves",
+        "cityName": "Atlanta",
+        "stateName": "GA",
+        "league": "NL",
+        "division": "NL East"
+    },
+    {
+        "stadiumName": "Oriole Park",
+        "teamName": "Baltimore Orioles",
+        "cityName": "Baltimore",
+        "stateName": "MD",
+        "league": "AL",
+        "division": "AL East"
+    },
+    {
+        "stadiumName": "Fenway Park",
+        "teamName": "Boston Red Sox",
+        "cityName": "Boston",
+        "stateName": "MA",
+        "league": "AL",
+        "division": "AL East"
+    },
+    {
+        "stadiumName": "Wrigley Field",
+        "teamName": "Chicago Cubs",
+        "cityName": "Chicago",
+        "stateName": "IL",
+        "league": "NL",
+        "division": "NL Central"
+    },
+    {
+        "stadiumName": "Guaranteed Rate Field",
+        "teamName": "Chicago White Sox",
+        "cityName": "Chicago",
+        "stateName": "IL",
+        "league": "AL",
+        "division": "AL Central"
+    },
+    {
+        "stadiumName": "Great American Ball Park",
+        "teamName": "Cincinnati Reds",
+        "cityName": "Cincinnati",
+        "stateName": "OH",
+        "league": "NL",
+        "division": "NL Central"
+    },
+    {
+        "stadiumName": "Progressive Field",
+        "teamName": "Cleveland Guardians",
+        "cityName": "Cleveland",
+        "stateName": "OH",
+        "league": "AL",
+        "division": "AL Central"
+    },
+    {
+        "stadiumName": "Coors Field",
+        "teamName": "Colorado Rockies",
+        "cityName": "Denver",
+        "stateName": "CO",
+        "league": "NL",
+        "division": "NL West"
+    },
+    {
+        "stadiumName": "Comerica Park",
+        "teamName": "Detroit Tigers",
+        "cityName": "Detroit",
+        "stateName": "MI",
+        "league": "AL",
+        "division": "AL Central"
+    },
+    {
+        "stadiumName": "Minute Maid Park",
+        "teamName": "Houston Astros",
+        "cityName": "Houston",
+        "stateName": "TX",
+        "league": "AL",
+        "division": "AL West"
+    },
+    {
+        "stadiumName": "Kauffman Stadium",
+        "teamName": "Kansas City Royals",
+        "cityName": "Kansas City",
+        "stateName": "MO",
+        "league": "AL",
+        "division": "AL Central"
+    },
+    {
+        "stadiumName": "Angel Stadium",
+        "teamName": "Los Angeles Angels",
+        "cityName": "Anaheim",
+        "stateName": "CA",
+        "league": "AL",
+        "division": "AL West"
+    },
+    {
+        "stadiumName": "Dodgers Stadium",
+        "teamName": "Los Angeles Dodgers",
+        "cityName": "Los Angeles",
+        "stateName": "CA",
+        "league": "NL",
+        "division": "NL West"
+    },
+    {
+        "stadiumName": "loanDepot Park",
+        "teamName": "Miami Marlins",
+        "cityName": "Miami",
+        "stateName": "FL",
+        "league": "NL",
+        "division": "NL East"
+    },
+    {
+        "stadiumName": "American Family Field",
+        "teamName": "Milwaukee Brewers",
+        "cityName": "Milwaukee",
+        "stateName": "WI",
+        "league": "NL",
+        "division": "NL Central"
+    },
+    {
+        "stadiumName": "Target Field",
+        "teamName": "Minnesota Twins",
+        "cityName": "Minneapolis",
+        "stateName": "MN",
+        "league": "AL",
+        "division": "AL Central"
+    },
+    {
+        "stadiumName": "Citi Field",
+        "teamName": "New York Mets",
+        "cityName": "Flushing",
+        "stateName": "NY",
+        "league": "NL",
+        "division": "NL East"
+    },
+    {
+        "stadiumName": "Yankee Stadium",
+        "teamName": "New York Yankees",
+        "cityName": "Bronx",
+        "stateName": "NY",
+        "league": "AL",
+        "division": "AL East"
+    },
+    {
+        "stadiumName": "Oakland Coliseum",
+        "teamName": "Oakland Athletics",
+        "cityName": "Oakland",
+        "stateName": "CA",
+        "league": "AL",
+        "division": "AL West"
+    },
+    {
+        "stadiumName": "Citizens Bank Park",
+        "teamName": "Philadelphia Phillies",
+        "cityName": "Philadelphia",
+        "stateName": "PA",
+        "league": "NL",
+        "division": "NL East"
+    },
+    {
+        "stadiumName": "PNC Park",
+        "teamName": "Pittsburgh Pirates",
+        "cityName": "Pittsburgh",
+        "stateName": "PA",
+        "league": "NL",
+        "division": "NL Central"
+    },
+    {
+        "stadiumName": "Petco Park",
+        "teamName": "San Diego Padres",
+        "cityName": "San Diego",
+        "stateName": "CA",
+        "league": "NL",
+        "division": "NL West"
+    },
+    {
+        "stadiumName": "Oracle Park",
+        "teamName": "San Francisco Giants",
+        "cityName": "San Francisco",
+        "stateName": "CA",
+        "league": "NL",
+        "division": "NL West"
+    },
+    {
+        "stadiumName": "T-Mobile Park",
+        "teamName": "Seattle Mariners",
+        "cityName": "Seattle",
+        "stateName": "WA",
+        "league": "AL",
+        "division": "AL West"
+    },
+    {
+        "stadiumName": "Busch Stadium",
+        "teamName": "St. Louis Cardinals",
+        "cityName": "St. Louis",
+        "stateName": "MO",
+        "league": "NL",
+        "division": "NL Central"
+    },
+    {
+        "stadiumName": "Tropicana Field",
+        "teamName": "Tampa Bay Rays",
+        "cityName": "St. Petersburg",
+        "stateName": "FL",
+        "league": "AL",
+        "division": "AL East"
+    },
+    {
+        "stadiumName": "Globe Life Field",
+        "teamName": "Texas Rangers",
+        "cityName": "Arlington",
+        "stateName": "TX",
+        "league": "AL",
+        "division": "AL West"
+    },
+    {
+        "stadiumName": "Rogers Centre",
+        "teamName": "Toronto Blue Jays",
+        "cityName": "Toronto",
+        "stateName": "ON",
+        "league": "AL",
+        "division": "AL East"
+    },
+    {
+        "stadiumName": "Nationals Park",
+        "teamName": "Washington Nationals",
+        "cityName": "Washington",
+        "stateName": "DC",
+        "league": "NL",
+        "division": "NL East"
+    }
+]

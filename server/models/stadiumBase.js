@@ -26,7 +26,6 @@ const stadiumBaseSchema = new Schema({
     },
     dateVisited: {
         type: Date,
-        required: false,
     }
 }, {
     _id: false

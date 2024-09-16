@@ -1,13 +1,18 @@
-const { Schema } = require("mongoose");
-
+const { Schema, model } = require("mongoose");
 const stadiumBaseSchema = require("./stadiumBase");
 
-const baseballSchema = new Schema({
+const MLBSchema = new Schema({
     ...stadiumBaseSchema.obj,
     league: {
         type: String,
         enum: ["AL", "NL"],
+    },
+    division: {
+        type: String,
+        enum: ["AL East", "AL Central", "AL West", "NL East", "NL Central", "NL West"]
     }
 });
 
-module.exports = baseballSchema;
+const MLBModel = model("MLB", MLBSchema);
+
+module.exports = { MLBSchema, MLBModel } ;

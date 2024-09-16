@@ -1,10 +1,10 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const baseballSchema = require("./baseballStadiums");
-const basketballSchema = require("./basketballStadiums");
-const footballSchema = require("./footballStadiums");
-const hockeySchema = require("./hockeyStadiums");
+const { MLBSchema } = require("./baseballStadiums");
+// const basketballSchema = require("./basketballStadiums");
+// const footballSchema = require("./footballStadiums");
+// const hockeySchema = require("./hockeyStadiums");
 
 const userSchema = new Schema({
     userName: {
@@ -24,19 +24,19 @@ const userSchema = new Schema({
         required: true,
         minLength: 12,
     },
-    baseballStadiums: [baseballSchema],
-    basketballStadiums: [basketballSchema],
-    footballStadiums: [footballSchema],
-    hockeyStadiums: [hockeySchema],
+    baseballStadiums: [MLBSchema]
+    // basketballStadiums: [basketballSchema],
+    // footballStadiums: [footballSchema],
+    // hockeyStadiums: [hockeySchema],
 })
 
-userSchema.pre('save', async function (next) {
-    if (this.isModified('password') || this.isNew) {
+userSchema.pre("save", async function (next) {
+    if (this.isModified("password") || this.isNew) {
         const salt = await bcrypt.genSalt(10);
         this.password = await bcrypt.hash(this.password, salt);
     }
-    next();
-});
+    next ();
+})
 
 userSchema.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password);
