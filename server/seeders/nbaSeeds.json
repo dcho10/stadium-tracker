@@ -1,0 +1,242 @@
+[
+    {
+        "stadiumName": "State Farm Arena",
+        "teamName": "Atlanta Hawks",
+        "cityName": "Atlanta",
+        "stateName": "GA",
+        "league": "Eastern",
+        "division": "Southeast"
+    },
+    {
+        "stadiumName": "TD Garden",
+        "teamName": "Boston Celtics",
+        "cityName": "Boston",
+        "stateName": "MA",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Barclays Center",
+        "teamName": "Brooklyn Nets",
+        "cityName": "Brooklyn",
+        "stateName": "NY",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Spectrum Center",
+        "teamName": "Charlotte Hornets",
+        "cityName": "Charlotte",
+        "stateName": "NC",
+        "league": "Eastern",
+        "division": "Southeast"
+    },
+    {
+        "stadiumName": "United Center",
+        "teamName": "Chicago Bulls",
+        "cityName": "Chicago",
+        "stateName": "IL",
+        "league": "Eastern",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Rocket Mortgage Fieldhouse",
+        "teamName": "Cleveland Cavaliers",
+        "cityName": "Cleveland",
+        "stateName": "OH",
+        "league": "Eastern",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "American Airlines Center",
+        "teamName": "Dallas Mavericks",
+        "cityName": "Dallas",
+        "stateName": "TX",
+        "league": "Western",
+        "division": "Southwest"
+    },
+    {
+        "stadiumName": "Ball Arena",
+        "teamName": "Denver Nuggets",
+        "cityName": "Denver",
+        "stateName": "CO",
+        "league": "Western",
+        "division": "Northwest"
+    },
+    {
+        "stadiumName": "Little Caesars Arena",
+        "teamName": "Detroit Pistons",
+        "cityName": "Detroit",
+        "stateName": "MI",
+        "league": "Eastern",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Chase Center",
+        "teamName": "Golden State Warriors",
+        "cityName": "San Francisco",
+        "stateName": "CA",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Toyota Center",
+        "teamName": "Houston Rockets",
+        "cityName": "Houston",
+        "stateName": "TX",
+        "league": "Western",
+        "division": "Southwest"
+    },
+    {
+        "stadiumName": "Gainbridge Fieldhouse",
+        "teamName": "Indiana Pacers",
+        "cityName": "Indianapolis",
+        "stateName": "IN",
+        "league": "Eastern",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Intuit Dome",
+        "teamName": "Los Angeles Clippers",
+        "cityName": "Inglewood",
+        "stateName": "CA",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Crypto.com Arena",
+        "teamName": "Los Angeles Lakers",
+        "cityName": "Los Angeles",
+        "stateName": "CA",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "FedExForum",
+        "teamName": "Memphis Grizzlies",
+        "cityName": "Memphis",
+        "stateName": "TN",
+        "league": "Western",
+        "division": "Southwest"
+    },
+    {
+        "stadiumName": "Kaseya Center",
+        "teamName": "Miami Heat",
+        "cityName": "Miami",
+        "stateName": "FL",
+        "league": "Eastern",
+        "division": "Southeast"
+    },
+    {
+        "stadiumName": "Fiserv Forum",
+        "teamName": "Milwaukee Bucks",
+        "cityName": "Milwaukee",
+        "stateName": "WI",
+        "league": "Eastern",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Target Center",
+        "teamName": "Minnesota Timberwolves",
+        "cityName": "Minneapolis",
+        "stateName": "MN",
+        "league": "Western",
+        "division": "Northwest"
+    },
+    {
+        "stadiumName": "Smoothie King Center",
+        "teamName": "New Orleans Pelicans",
+        "cityName": "New Orleans",
+        "stateName": "LA",
+        "league": "Western",
+        "division": "Southwest"
+    },
+    {
+        "stadiumName": "Madison Square Garden",
+        "teamName": "New York Knicks",
+        "cityName": "New York",
+        "stateName": "NY",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Paycom Center",
+        "teamName": "Oklahoma City Thunder",
+        "cityName": "Oklahoma City",
+        "stateName": "OK",
+        "league": "Western",
+        "division": "Northwest"
+    },
+    {
+        "stadiumName": "Kia Forum",
+        "teamName": "Orlando Magic",
+        "cityName": "Orlando",
+        "stateName": "FL",
+        "league": "Eastern",
+        "division": "Southeast"
+    },
+    {
+        "stadiumName": "Wells Fargo Center",
+        "teamName": "Philadelphia 76ers",
+        "cityName": "Philadelphia",
+        "stateName": "PA",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Footprint Center",
+        "teamName": "Phoenix Suns",
+        "cityName": "Phoenix",
+        "stateName": "AZ",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Moda Center",
+        "teamName": "Portland Trail Blazers",
+        "cityName": "Portland",
+        "stateName": "OR",
+        "league": "Western",
+        "division": "Northwest"
+    },
+    {
+        "stadiumName": "Golden 1 Center",
+        "teamName": "Sacramento Kings",
+        "cityName": "Sacramento",
+        "stateName": "CA",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Frost Bank Center",
+        "teamName": "San Antonio Spurs",
+        "cityName": "San Antonio",
+        "stateName": "TX",
+        "league": "Western",
+        "division": "Southwest"
+    },
+    {
+        "stadiumName": "Scotiabank Arena",
+        "teamName": "Toronto Raptors",
+        "cityName": "Toronto",
+        "stateName": "ON",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Delta Center",
+        "teamName": "Utah Jazz",
+        "cityName": "Salt Lake City",
+        "stateName": "UT",
+        "league": "Western",
+        "division": "Northwest"
+    },
+    {
+        "stadiumName": "Capital One Arena",
+        "teamName": "Washington Wizards",
+        "cityName": "Washington",
+        "stateName": "DC",
+        "league": "Eastern",
+        "division": "Southeast"
+    }
+]

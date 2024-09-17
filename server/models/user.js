@@ -2,9 +2,9 @@ const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 const { MLBSchema } = require("./baseballStadiums");
-// const basketballSchema = require("./basketballStadiums");
-// const footballSchema = require("./footballStadiums");
-// const hockeySchema = require("./hockeyStadiums");
+const { NBASchema } = require("./basketballStadiums");
+const { NFLSchema } = require("./footballStadiums");
+const { NHLSchema } = require("./hockeyStadiums");
 
 const userSchema = new Schema({
     userName: {
@@ -24,10 +24,10 @@ const userSchema = new Schema({
         required: true,
         minLength: 12,
     },
-    baseballStadiums: [MLBSchema]
-    // basketballStadiums: [basketballSchema],
-    // footballStadiums: [footballSchema],
-    // hockeyStadiums: [hockeySchema],
+    baseballStadiums: [MLBSchema],
+    basketballStadiums: [NBASchema],
+    footballStadiums: [NFLSchema],
+    hockeyStadiums: [NHLSchema],
 })
 
 userSchema.pre("save", async function (next) {

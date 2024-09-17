@@ -1,0 +1,258 @@
+[
+    {
+        "stadiumName": "Honda Center",
+        "teamName": "Anaheim Ducks",
+        "cityName": "Anaheim",
+        "stateName": "CA",
+        "league": "Western",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "TD Garden",
+        "teamName": "Boston Bruins",
+        "cityName": "Boston",
+        "stateName": "MA",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "KeyBank Center",
+        "teamName": "Buffalo Sabres",
+        "cityName": "Buffalo",
+        "stateName": "NY",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Scotiabank Saddledome",
+        "teamName": "Calgary Flames",
+        "cityName": "Calgary",
+        "stateName": "AB",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Lenovo Center",
+        "teamName": "Carolina Hurricanes",
+        "cityName": "Raleigh",
+        "stateName": "NC",
+        "league": "Eastern",
+        "division": "Metropolitan"
+    },
+    {
+        "stadiumName": "United Center",
+        "teamName": "Chicago Blackhawks",
+        "cityName": "Chicago",
+        "stateName": "IL",
+        "league": "Western",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Ball Arena",
+        "teamName": "Colorado Avalanche",
+        "cityName": "Denver",
+        "stateName": "CO",
+        "league": "Western",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Nationwide Arena",
+        "teamName": "Columbus Blue Jackets",
+        "cityName": "Columbus",
+        "stateName": "OH",
+        "league": "Eastern",
+        "division": "Metropolitan"
+    },
+    {
+        "stadiumName": "American Airlines Arena",
+        "teamName": "Dallas Stars",
+        "cityName": "Dallas",
+        "stateName": "TX",
+        "league": "Western",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Little Caesars Arena",
+        "teamName": "Detroit Red Wings",
+        "cityName": "Detroit",
+        "stateName": "MI",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Rogers Place",
+        "teamName": "Edmonton Oilers",
+        "cityName": "Edmonton",
+        "stateName": "AB",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Amerant Bank Arena",
+        "teamName": "Florida Panthers",
+        "cityName": "Sunrise",
+        "stateName": "FL",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Crypto.com Arena",
+        "teamName": "Los Angeles Kings",
+        "cityName": "Los Angeles",
+        "stateName": "CA",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Xcel Energy Center",
+        "teamName": "Minnesota Wild",
+        "cityName": "Saint Paul",
+        "stateName": "MN",
+        "league": "Western",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Bell Centre",
+        "teamName": "Montreal Canadiens",
+        "cityName": "Montreal",
+        "stateName": "QC",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Bridgestone Arena",
+        "teamName": "Nashville Predators",
+        "cityName": "Nashville",
+        "stateName": "TN",
+        "league": "Western",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Prudential Center",
+        "teamName": "New Jersey Devils",
+        "cityName": "Newark",
+        "stateName": "NJ",
+        "league": "Eastern",
+        "division": "Metropolitan"
+    },
+    {
+        "stadiumName": "UBS Arena",
+        "teamName": "New York Islanders",
+        "cityName": "Elmont",
+        "stateName": "NY",
+        "league": "Eastern",
+        "division": "Metropolitan"
+    },
+    {
+        "stadiumName": "Madison Square Garden",
+        "teamName": "New York Rangers",
+        "cityName": "New York City",
+        "stateName": "NY",
+        "league": "Eastern",
+        "division": "Metropolitan"
+    },
+    {
+        "stadiumName": "Canadian Tire Centre",
+        "teamName": "Ottawa Senators",
+        "cityName": "Ottawa",
+        "stateName": "ON",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Wells Fargo Arena",
+        "teamName": "Philadelphia Flyers",
+        "cityName": "Philadelphia",
+        "stateName": "PA",
+        "league": "Eastern",
+        "division": "Metropolitan"
+    },
+    {
+        "stadiumName": "PPG Paints Arena",
+        "teamName": "Pittsburgh Penguins",
+        "cityName": "Pittsburgh",
+        "stateName": "PA",
+        "league": "Eastern",
+        "division": "Metropolitan"
+    },
+    {
+        "stadiumName": "SAP Center",
+        "teamName": "San Jose Sharks",
+        "cityName": "San Jose",
+        "stateName": "CA",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Climate Pledge Arena",
+        "teamName": "Seattle Kraken",
+        "cityName": "Seattle",
+        "stateName": "WA",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Enterprise Center",
+        "teamName": "St. Louis Blues",
+        "cityName": "St. Louis",
+        "stateName": "MO",
+        "league": "Western",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Amalie Arena",
+        "teamName": "Tampa Bay Lightning",
+        "cityName": "Tampa",
+        "stateName": "FL",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Scotiabank Arena",
+        "teamName": "Toronto Maple Leafs",
+        "cityName": "Toronto",
+        "stateName": "ON",
+        "league": "Eastern",
+        "division": "Atlantic"
+    },
+    {
+        "stadiumName": "Delta Center",
+        "teamName": "Utah Hockey Club",
+        "cityName": "Salt Lake City",
+        "stateName": "UT",
+        "league": "Western",
+        "division": "Central"
+    },
+    {
+        "stadiumName": "Rogers Arena",
+        "teamName": "Vancouver Canucks",
+        "cityName": "Vancouver",
+        "stateName": "BC",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "T-Mobile Arena",
+        "teamName": "Vegas Golden Knights",
+        "cityName": "Paradise",
+        "stateName": "NV",
+        "league": "Western",
+        "division": "Pacific"
+    },
+    {
+        "stadiumName": "Capital One Arena",
+        "teamName": "Washington Capitals",
+        "cityName": "Washington",
+        "stateName": "DC",
+        "league": "Eastern",
+        "division": "Metropolitan"
+    },
+    {
+        "stadiumName": "Canada Life Centre",
+        "teamName": "Winnipeg Jets",
+        "cityName": "Winnipeg",
+        "stateName": "MB",
+        "league": "Western",
+        "division": "Central"
+    }
+]

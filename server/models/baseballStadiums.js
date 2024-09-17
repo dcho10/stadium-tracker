@@ -15,4 +15,4 @@ const MLBSchema = new Schema({
 
 const MLBModel = model("MLB", MLBSchema);
 
-module.exports = { MLBSchema, MLBModel } ;
+module.exports = { MLBSchema, MLBModel };

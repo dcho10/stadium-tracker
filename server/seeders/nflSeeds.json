@@ -1,0 +1,258 @@
+[
+    {
+        "stadiumName": "State Farm Stadium",
+        "teamName": "Arizona Cardinals",
+        "cityName": "Glendale",
+        "stateName": "AZ",
+        "league": "NFC",
+        "division": "West"
+    },
+    {
+        "stadiumName": "Mercedes-Benz Stadium",
+        "teamName": "Atlanta Falcons",
+        "cityName": "Atlanta",
+        "stateName": "GA",
+        "league": "NFC",
+        "division": "South"
+    },
+    {
+        "stadiumName": "M&T Bank Stadium",
+        "teamName": "Baltimore Ravens",
+        "cityName": "Baltimore",
+        "stateName": "MD",
+        "league": "AFC",
+        "division": "North"
+    },
+    {
+        "stadiumName": "Highmark Stadium",
+        "teamName": "Buffalo Bills",
+        "cityName": "Orchard Park",
+        "stateName": "NY",
+        "league": "AFC",
+        "division": "East"
+    },
+    {
+        "stadiumName": "Bank of America Stadium",
+        "teamName": "Carolina Panthers",
+        "cityName": "Charlotte",
+        "stateName": "NC",
+        "league": "NFC",
+        "division": "South"
+    },
+    {
+        "stadiumName": "Soldier Field",
+        "teamName": "Chicago Bears",
+        "cityName": "Chicago",
+        "stateName": "IL",
+        "league": "NFC",
+        "division": "North"
+    },
+    {
+        "stadiumName": "Paycor Stadium",
+        "teamName": "Cincinnati Bengals",
+        "cityName": "Cincinnati",
+        "stateName": "OH",
+        "league": "AFC",
+        "division": "North"
+    },
+    {
+        "stadiumName": "Huntington Bank Field",
+        "teamName": "Cleveland Browns",
+        "cityName": "Cleveland",
+        "stateName": "OH",
+        "league": "AFC",
+        "division": "North"
+    },
+    {
+        "stadiumName": "AT&T Stadium",
+        "teamName": "Dallas Cowboys",
+        "cityName": "Arlington",
+        "stateName": "TX",
+        "league": "NFC",
+        "division": "East"
+    },
+    {
+        "stadiumName": "Empower Field at Mile High",
+        "teamName": "Denver Broncos",
+        "cityName": "Denver",
+        "stateName": "CO",
+        "league": "AFC",
+        "division": "West"
+    },
+    {
+        "stadiumName": "Ford Field",
+        "teamName": "Detroit Lions",
+        "cityName": "Detroit",
+        "stateName": "MI",
+        "league": "NFC",
+        "division": "North"
+    },
+    {
+        "stadiumName": "Lambeau Field",
+        "teamName": "Green Bay Packers",
+        "cityName": "Green Bay",
+        "stateName": "WI",
+        "league": "NFC",
+        "division": "North"
+    },
+    {
+        "stadiumName": "NRG Stadium",
+        "teamName": "Houston Texans",
+        "cityName": "Houston",
+        "stateName": "TX",
+        "league": "AFC",
+        "division": "South"
+    },
+    {
+        "stadiumName": "Lucas Oil Stadium",
+        "teamName": "Indianapolis Colts",
+        "cityName": "Indianapolis",
+        "stateName": "IN",
+        "league": "AFC",
+        "division": "South"
+    },
+    {
+        "stadiumName": "EverBank Stadium",
+        "teamName": "Jacksonville Jaguars",
+        "cityName": "Jacksonville",
+        "stateName": "FL",
+        "league": "AFC",
+        "division": "South"
+    },
+    {
+        "stadiumName": "Arrowhead Stadium",
+        "teamName": "Kansas City Chiefs",
+        "cityName": "Kansas City",
+        "stateName": "MO",
+        "league": "AFC",
+        "division": "West"
+    },
+    {
+        "stadiumName": "Allegiant Stadium",
+        "teamName": "Las Vegas Raiders",
+        "cityName": "Paradise",
+        "stateName": "NV",
+        "league": "AFC",
+        "division": "West"
+    },
+    {
+        "stadiumName": "SoFi Stadium",
+        "teamName": "Los Angeles Rams",
+        "cityName": "Inglewood",
+        "stateName": "CA",
+        "league": "NFC",
+        "division": "West"
+    },
+    {
+        "stadiumName": "SoFi Stadium",
+        "teamName": "Los Angeles Chargers",
+        "cityName": "Inglewood",
+        "stateName": "CA",
+        "league": "AFC",
+        "division": "West"
+    },
+    {
+        "stadiumName": "Hard Rock Stadium",
+        "teamName": "Miami Dolphins",
+        "cityName": "Miami Gardens",
+        "stateName": "FL",
+        "league": "AFC",
+        "division": "East"
+    },
+    {
+        "stadiumName": "U.S. Bank Stadium",
+        "teamName": "Minnesota Vikings",
+        "cityName": "Minneapolis",
+        "stateName": "MN",
+        "league": "NFC",
+        "division": "North"
+    },
+    {
+        "stadiumName": "Gillette Stadium",
+        "teamName": "New England Patriots",
+        "cityName": "Foxborough",
+        "stateName": "MA",
+        "league": "AFC",
+        "division": "East"
+    },
+    {
+        "stadiumName": "Caesars Superdome",
+        "teamName": "New Orleans Saints",
+        "cityName": "New Orleans",
+        "stateName": "LA",
+        "league": "NFC",
+        "division": "South"
+    },
+    {
+        "stadiumName": "MetLife Stadium",
+        "teamName": "New York Giants",
+        "cityName": "East Rutherford",
+        "stateName": "NJ",
+        "league": "NFC",
+        "division": "East"
+    },
+    {
+        "stadiumName": "MetLife Stadium",
+        "teamName": "New York Jets",
+        "cityName": "East Rutherford",
+        "stateName": "NJ",
+        "league": "AFC",
+        "division": "East"
+    },
+    {
+        "stadiumName": "Lincoln Financial Field",
+        "teamName": "Philadelphia Eagles",
+        "cityName": "Philadelphia",
+        "stateName": "PA",
+        "league": "NFC",
+        "division": "East"  
+    },
+    {
+        "stadiumName": "Acrisure Stadium",
+        "teamName": "Pittsburgh Steelers",
+        "cityName": "Pittsburgh",
+        "stateName": "PA",
+        "league": "AFC",
+        "division": "North"
+    },
+    {
+        "stadiumName": "Levi's Stadium",
+        "teamName": "San Francisco 49ers",
+        "cityName": "Santa Clara",
+        "stateName": "CA",
+        "league": "NFC",
+        "division": "West"
+    },
+    {
+        "stadiumName": "Lumen Field",
+        "teamName": "Seattle Seahawks",
+        "cityName": "Seattle",
+        "stateName": "WA",
+        "league": "NFC",
+        "division": "West"
+    },
+    {
+        "stadiumName": "Raymond James Stadium",
+        "teamName": "Tampa Bay Buccaneers",
+        "cityName": "Tampa",
+        "stateName": "FL",
+        "league": "NFC",
+        "division": "South"
+    },
+    {
+        "stadiumName": "Nissan Stadium",
+        "teamName": "Tennessee Titans",
+        "cityName": "Nashville",
+        "stateName": "TN",
+        "league": "AFC",
+        "division": "South"
+    },
+    {
+        "stadiumName": "Northwest Stadium",
+        "teamName": "Washington Commanders",
+        "cityName": "Landover",
+        "stateName": "MD",
+        "league": "NFC",
+        "division": "East"
+    }
+]

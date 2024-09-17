@@ -3,12 +3,17 @@ const db = require("../config/connection");
 
 module.exports = async (modelName, collectionName) => {
     try {
-        let modelExists = await models[modelName].db.db.listCollections({
-            name: collectionName
-        }).toArray()
+        if (!models[modelName]) {
+            throw new Error(`Model ${modelName} does not exist.`);
+        }
 
-        if (modelExists.length) {
-            await db.dropCollection(collectionName);
+        let collectionExists = await db.db.listCollections({ name: collectionName }).toArray();
+        
+        if (collectionExists.length) {
+            await db.db.dropCollection(collectionName);
+            console.log(`Collection ${collectionName} dropped successfully.`);
+        } else {
+            console.log(`Collection ${collectionName} does not exist.`);
         }
     } catch (err) {
         throw err;
