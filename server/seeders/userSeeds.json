@@ -1,0 +1,249 @@
+[
+    {
+        "userName": "DeeCho",
+        "email": "david@test.com",
+        "password": "testtesttest1",
+        "baseballStadiums": 
+        [
+            {
+                "stadiumName": "Rogers Centre",
+                "teamName": "Toronto Blue Jays",
+                "cityName": "Toronto",
+                "stateName": "ON",
+                "hasVisited": true,
+                "dateVisited": "September 13, 2024"
+            },
+            {
+                "stadiumName": "PNC Park",
+                "teamName": "Pittsburgh Pirates",
+                "cityName": "Pittsburgh",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 26, 2024"
+            },
+            {
+                "stadiumName": "Citizens Bank Park",
+                "teamName": "Philadelphia Phillies",
+                "cityName": "Philadelphia",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 27, 2024"
+            },
+            {
+                "stadiumName": "Fenway Park",
+                "teamName": "Boston Red Sox",
+                "cityName": "Boston",
+                "stateName": "MA",
+                "hasVisited": true,
+                "dateVisited": "August 28, 2024"
+            },
+            {
+                "stadiumName": "Yankee Stadium",
+                "teamName": "New York Yankees",
+                "cityName": "Bronx",
+                "stateName": "NY",
+                "hasVisited": true,
+                "dateVisited": "August 30, 2024"
+            }
+        ],
+        "basketballStadiums": [
+            {
+                "stadiumName": "Scotiabank Arena",
+                "teamName": "Toronto Blue Raptors",
+                "cityName": "Toronto",
+                "stateName": "ON",
+                "hasVisited": true,
+                "dateVisited": "September 13, 2024"
+            }
+        ]
+    },
+    {
+        "userName": "JAdams",
+        "email": "josh@test.com",
+        "password": "testtesttest2",
+        "baseballStadiums": 
+        [
+            {
+                "stadiumName": "Rogers Centre",
+                "teamName": "Toronto Blue Jays",
+                "cityName": "Toronto",
+                "stateName": "ON",
+                "hasVisited": true,
+                "dateVisited": "September 13, 2024"
+            },
+            {
+                "stadiumName": "PNC Park",
+                "teamName": "Pittsburgh Pirates",
+                "cityName": "Pittsburgh",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 26, 2024"
+            },
+            {
+                "stadiumName": "Citizens Bank Park",
+                "teamName": "Philadelphia Phillies",
+                "cityName": "Philadelphia",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 27, 2024"
+            },
+            {
+                "stadiumName": "Fenway Park",
+                "teamName": "Boston Red Sox",
+                "cityName": "Boston",
+                "stateName": "MA",
+                "hasVisited": true,
+                "dateVisited": "August 28, 2024"
+            },
+            {
+                "stadiumName": "Yankee Stadium",
+                "teamName": "New York Yankees",
+                "cityName": "Bronx",
+                "stateName": "NY",
+                "hasVisited": true,
+                "dateVisited": "August 30, 2024"
+            }
+        ]    },
+    {
+        "userName": "CWhite",
+        "email": "cody@test.com",
+        "password": "testtesttest3",
+        "baseballStadiums": 
+        [
+            {
+                "stadiumName": "Rogers Centre",
+                "teamName": "Toronto Blue Jays",
+                "cityName": "Toronto",
+                "stateName": "ON",
+                "hasVisited": true,
+                "dateVisited": "September 13, 2024"
+            },
+            {
+                "stadiumName": "PNC Park",
+                "teamName": "Pittsburgh Pirates",
+                "cityName": "Pittsburgh",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 26, 2024"
+            },
+            {
+                "stadiumName": "Citizens Bank Park",
+                "teamName": "Philadelphia Phillies",
+                "cityName": "Philadelphia",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 27, 2024"
+            },
+            {
+                "stadiumName": "Fenway Park",
+                "teamName": "Boston Red Sox",
+                "cityName": "Boston",
+                "stateName": "MA",
+                "hasVisited": true,
+                "dateVisited": "August 28, 2024"
+            },
+            {
+                "stadiumName": "Yankee Stadium",
+                "teamName": "New York Yankees",
+                "cityName": "Bronx",
+                "stateName": "NY",
+                "hasVisited": true,
+                "dateVisited": "August 30, 2024"
+            }
+        ]
+    },
+    {
+        "userName": "BTorralba",
+        "email": "brando@test.com",
+        "password": "testtesttest4",
+        "baseballStadiums": 
+        [
+            {
+                "stadiumName": "Rogers Centre",
+                "teamName": "Toronto Blue Jays",
+                "cityName": "Toronto",
+                "stateName": "ON",
+                "hasVisited": true,
+                "dateVisited": "September 13, 2024"
+            },
+            {
+                "stadiumName": "PNC Park",
+                "teamName": "Pittsburgh Pirates",
+                "cityName": "Pittsburgh",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 26, 2024"
+            },
+            {
+                "stadiumName": "Citizens Bank Park",
+                "teamName": "Philadelphia Phillies",
+                "cityName": "Philadelphia",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 27, 2024"
+            },
+            {
+                "stadiumName": "Fenway Park",
+                "teamName": "Boston Red Sox",
+                "cityName": "Boston",
+                "stateName": "MA",
+                "hasVisited": true,
+                "dateVisited": "August 28, 2024"
+            },
+            {
+                "stadiumName": "Yankee Stadium",
+                "teamName": "New York Yankees",
+                "cityName": "Bronx",
+                "stateName": "NY",
+                "hasVisited": true,
+                "dateVisited": "August 30, 2024"
+            }
+        ]    },
+    {
+        "userName": "RPatel",
+        "email": "romil@test.com",
+        "password": "testtesttest5",
+        "baseballStadiums": 
+        [
+            {
+                "stadiumName": "Rogers Centre",
+                "teamName": "Toronto Blue Jays",
+                "cityName": "Toronto",
+                "stateName": "ON",
+                "hasVisited": true,
+                "dateVisited": "September 13, 2024"
+            },
+            {
+                "stadiumName": "PNC Park",
+                "teamName": "Pittsburgh Pirates",
+                "cityName": "Pittsburgh",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 26, 2024"
+            },
+            {
+                "stadiumName": "Citizens Bank Park",
+                "teamName": "Philadelphia Phillies",
+                "cityName": "Philadelphia",
+                "stateName": "PA",
+                "hasVisited": true,
+                "dateVisited": "August 27, 2024"
+            },
+            {
+                "stadiumName": "Fenway Park",
+                "teamName": "Boston Red Sox",
+                "cityName": "Boston",
+                "stateName": "MA",
+                "hasVisited": true,
+                "dateVisited": "August 28, 2024"
+            },
+            {
+                "stadiumName": "Yankee Stadium",
+                "teamName": "New York Yankees",
+                "cityName": "Bronx",
+                "stateName": "NY",
+                "hasVisited": true,
+                "dateVisited": "August 30, 2024"
+            }
+        ]    }
+]

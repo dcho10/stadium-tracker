@@ -1,4 +1,4 @@
-const { User, MLBStadium, NBAStadium, NHLStadium, NFLStadium } = require("../models");
+const { User } = require("../models");
 const { signToken, AuthenticationError } = require("../utils/auth");
 
 const resolvers = {
@@ -6,26 +6,14 @@ const resolvers = {
         users: async () => {
             return User.find()
         },
-        user: async (parent, { username }) => {
-            return User.findOne()({ username });
+        user: async (parent, { userId }) => {
+            return User.findById({ _id: userId });
         },
-        mlbStadiums: async () => {
-            return MLBStadium.find();
-        },
-        nbaStadiums: async () => {
-            return NBAStadium.find();
-        },
-        nflStadiums: async () => {
-            return NFLStadium.find();
-        },
-        nhlStadiums: async () => {
-            return NHLStadium.find();
-        }
     },
 
     Mutation: {
-        addUser: async (parent, {username, email, password }) => {
-            const user = await User.create({ username, email, password });
+        addUser: async (parent, {userName, email, password }) => {
+            const user = await User.create({ userName, email, password });
             const token = signToken(user);
             return { token, user }
         },
@@ -45,82 +33,8 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user};
-        },
-        visitMLBStadium: async (parent, { userId, stadiumId }) => {
-            const stadium = await MLBStadium.findById(stadiumId);
-
-            if (!stadium) {
-                throw new Error("Stadium not found"); 
-            }
-
-            const user = await User.findById(userId);
-
-            if (user.visitedMLBStadiums.includes(stadiumId)) {
-                throw new Error("Stadium already visited");
-            }
-
-            user.visitedMLBStadiums.push(stadiumId);
-            user.stadiumCount = user.stadiumCount + 1;
-            await user.save();
-
-            return user;
-        },
-        visitedNBAStadium: async (parent, { userId, stadiumId }) => {
-            const stadium = await NBAStadium.findById(stadiumId);
-
-            if (!stadium) {
-                throw new Error("Stadium not found");
-            }
-
-            const user = await User.findById(userId);
-
-            if (user.visitedNBAStadiums.includes(stadiumId)) {
-                throw new Error("Stadium already visited");
-            }
-
-            user.visitedNBAStadiums.push(stadiumId);
-            user.stadiumCount = user.stadiumCount + 1;
-            await user.save();
-
-            return user;
-        },
-        visitedNHLStadium: async (parent, { userId, stadiumId }) => {
-            const stadium = await NHLStadium.findById(stadiumId);
-
-            if (!stadium) {
-                throw new Error("Stadium not found");
-            }
-
-            const user = await User.findById(userId);
-
-            if (user.visitedNHLStadiums.includes(stadiumId)) {
-                throw new Error("Stadium already visited");
-            }
-
-            user.visitedNHLStadiums.push(stadiumId);
-            user.stadiumCount = user.stadiumCount + 1;
-            await user.save();
-
-            return user;
-        },
-        visitedNFLStadium: async (parent, { userId, stadiumId }) => {
-            const stadium = await NFLStadium.findById(stadiumId);
-
-            if (!stadium) {
-                throw new Error("Stadium not found");
-            }
-
-            const user = await User.findById(userId);
-
-            if (user.visitedNFLStadiums.includes(stadiumId)) {
-                throw new Error("Stadium already visited");
-            }
-
-            user.visitedNFLStadiums.push(stadiumId);
-            user.stadiumCount = user.stadiumCount + 1;
-            await user.save();
-
-            return user;
         }
     }
 }
+
+module.exports = resolvers;

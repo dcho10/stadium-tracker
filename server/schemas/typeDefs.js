@@ -1,54 +1,63 @@
 const typeDefs = `
     type User {
         _id: ID
-        username: String
+        userName: String
         email: String
         password: String
-        visitedMLBStadiums: [MLBStadium]
-        visitedNBAStadiums: [NBAStadium]
-        visitedNHLStadiums: [NHLStadium]
-        visitedNFLStadiums: [NFLStadium]
-        stadiumCount: Int
-
+        baseballStadiums: [MLBStadium]
+        basketballStadiums: [NBAStadium]
+        footballStadiums: [NFLStadium]
+        hockeyStadiums: [NHLStadium]
     }
 
     interface Stadium {
         _id: ID
-        name: String
-        city: String
-        state: String
+        stadiumName: String
+        teamName: String
+        cityName: String
+        stateName: String
+        hasVisited: Boolean
+        dateVisited: String
     }
 
     type MLBStadium implements Stadium {
         _id: ID
-        name: String
-        team: String
-        city: String
-        state: String
+        stadiumName: String
+        teamName: String
+        cityName: String
+        stateName: String
+        hasVisited: Boolean
+        dateVisited: String    
     }
 
     type NBAStadium implements Stadium {
         _id: ID
-        name: String
-        team: String
-        city: String
-        state: String
+        stadiumName: String
+        teamName: String
+        cityName: String
+        stateName: String
+        hasVisited: Boolean
+        dateVisited: String
     }
 
     type NHLStadium implements Stadium {
         _id: ID
-        name: String
-        team: String
-        city: String
-        state: String
+        stadiumName: String
+        teamName: String
+        cityName: String
+        stateName: String
+        hasVisited: Boolean
+        dateVisited: String
     }
 
     type NFLStadium implements Stadium {
         _id: ID
-        name: String
-        team: String
-        city: String
-        state: String
+        stadiumName: String
+        teamName: String
+        cityName: String
+        stateName: String
+        hasVisited: Boolean
+        dateVisited: String
     }
 
     type Auth {
@@ -58,18 +67,17 @@ const typeDefs = `
 
     type Query {
         users: [User]
-        user(username: String!): User
-        stadium(id: ID!): Stadium
-        mlbStadiums: [MLBStadium]
-        nbaStadiums: [NBAStadium]
-        nhlStadiums: [NHLStadium]
-        nflStadiums: [NFLStadium]
+        user(userId: ID!): User
+        me: User
     }
 
     type Mutation {
-        addUser(username: String!, email: String!, password: String!): Auth
-        updateUser(userId: ID!, username: String, email: String, password: String): User
+        addUser(userName: String!, email: String!, password: String!): Auth
+
+        updateUser(userId: ID!, userName: String, email: String, password: String): User
+
         login(email: String!, password: String!): Auth
+
         visitMLBStadium(userId: ID!, stadiumId: ID!): User
         visitNBAStadium(userId: ID!, stadiumId: ID!): User
         visitNHLStadium(userId: ID!, stadiumId: ID!): User
