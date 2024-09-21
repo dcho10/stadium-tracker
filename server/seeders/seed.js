@@ -17,7 +17,7 @@ db.once("open", async () => {
         await cleanDB("NFLModel", "nfls");
         await cleanDB("NHLModel", "nhls");
         
-        await User.insertMany(userSeeds);
+        await User.create(userSeeds);
         await MLBModel.insertMany(MLBSeeds);
         await NBAModel.insertMany(NBASeeds);
         await NFLModel.insertMany(NFLSeeds);

@@ -73,15 +73,14 @@ const typeDefs = `
 
     type Mutation {
         addUser(userName: String!, email: String!, password: String!): Auth
-
+        
         updateUser(userId: ID!, userName: String, email: String, password: String): User
 
-        login(email: String!, password: String!): Auth
+        login(userName: String!, password: String!): Auth
 
-        visitMLBStadium(userId: ID!, stadiumId: ID!): User
-        visitNBAStadium(userId: ID!, stadiumId: ID!): User
-        visitNHLStadium(userId: ID!, stadiumId: ID!): User
-        visitNFLStadium(userId: ID!, stadiumId: ID!): User
+        addVisit(userId: ID!, stadiumLeague: String, stadiumId: ID!, dateVisited: String!): User
+
+        deleteVisit(userId: ID!, stadiumLeague: String, stadiumId: ID!): User
     }
 `;
 
