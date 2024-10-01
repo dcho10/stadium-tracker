@@ -1,6 +1,7 @@
 [
     {
-        "userName": "DeeCho",
+        "firstName": "David",
+        "lastName": "Cho",
         "email": "david@test.com",
         "password": "testtesttest1",
         "baseballStadiums": 
@@ -58,7 +59,8 @@
         ]
     },
     {
-        "userName": "JAdams",
+        "firstName": "Joshua",
+        "lastName": "Adams",
         "email": "josh@test.com",
         "password": "testtesttest2",
         "baseballStadiums": 
@@ -105,7 +107,8 @@
             }
         ]    },
     {
-        "userName": "CWhite",
+        "firstName": "Cody",
+        "lastName": "White",
         "email": "cody@test.com",
         "password": "testtesttest3",
         "baseballStadiums": 
@@ -153,7 +156,8 @@
         ]
     },
     {
-        "userName": "BTorralba",
+        "firstName": "Brandon",
+        "lastName": "Torralba",
         "email": "brando@test.com",
         "password": "testtesttest4",
         "baseballStadiums": 
@@ -200,7 +204,8 @@
             }
         ]    },
     {
-        "userName": "RPatel",
+        "firstName": "Romil",
+        "lastName": "Patel",
         "email": "romil@test.com",
         "password": "testtesttest5",
         "baseballStadiums": 

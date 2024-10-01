@@ -14,21 +14,22 @@ const resolvers = {
     },
 
     Mutation: {
-        addUser: async (parent, {userName, email, password }) => {
-            const user = await User.create({ userName, email, password });
+        addUser: async (parent, {firstName, lastName, email, password }) => {
+            const user = await User.create({ firstName, lastName, email, password });
             const token = signToken(user);
             return { token, user }
         },
-        updateUser: async (parent, { userId, userName, email, password }) => {
+        updateUser: async (parent, { userId, firstName, lastName, email, password }) => {
             const updatedInfo = {};
-            if (userName) updatedInfo.userName = userName;
+            if (firstName) updatedInfo.firstName = firstName;
+            if (lastName) updatedInfo.lastName = lastName;
             if (email) updatedInfo.email = email;
             if (password) updatedInfo.password = await bcrypt.hash(password, 10);
 
             return User.findByIdAndUpdate(userId, updatedInfo, { new: true })
         },
-        login: async (parent, { userName, password }) => {
-            const user = await User.findOne({ userName });
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
 
             if (!user) {
                 throw new AuthenticationError

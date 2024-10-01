@@ -7,7 +7,13 @@ const { NFLSchema } = require("./footballStadiums");
 const { NHLSchema } = require("./hockeyStadiums");
 
 const userSchema = new Schema({
-    userName: {
+    firstName: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+    },
+    lastName: {
         type: String,
         required: true,
         unique: true,

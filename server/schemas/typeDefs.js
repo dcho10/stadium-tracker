@@ -1,7 +1,8 @@
 const typeDefs = `
     type User {
         _id: ID
-        userName: String
+        firstName: String
+        lastName: String
         email: String
         password: String
         baseballStadiums: [MLBStadium]
@@ -72,11 +73,11 @@ const typeDefs = `
     }
 
     type Mutation {
-        addUser(userName: String!, email: String!, password: String!): Auth
+        addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         
-        updateUser(userId: ID!, userName: String, email: String, password: String): User
+        updateUser(userId: ID!, firstName: String, lastName: String, email: String, password: String): User
 
-        login(userName: String!, password: String!): Auth
+        login(email: String!, password: String!): Auth
 
         addVisit(userId: ID!, stadiumLeague: String, stadiumId: ID!, dateVisited: String!): User
 
