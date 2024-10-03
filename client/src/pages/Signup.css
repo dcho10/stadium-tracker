@@ -1,0 +1,59 @@
+.signup-form, .login-form {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem;
+    background-color: var(--white);
+    margin: auto;
+    width: 30rem;
+    border-radius: 0.5rem;
+}
+
+h3 {
+    font-size: 3.75rem;
+    font-family: "Rubik", sans-serif;
+    color: var(--black);
+    margin: auto;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-family: "Rubik", sans-serif;
+    color: var(--secondary);
+}
+
+.signup-form p {
+    font-family: "DM Sans", system-ui;
+    opacity: 0.75;
+}
+
+.signup-form input, .login-form input {
+    width: 20rem;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0 0 0;
+}
+
+.account-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-btns button {
+    font-size: 1rem;
+    padding: 0.25rem;
+    margin: auto;
+    width: 5rem;
+    border-radius: 0.5rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.account-btns button:hover {
+    cursor: pointer;
+}
+
+.account-btns a {
+    color: var(--white);
+}

@@ -1,0 +1,33 @@
+h2 {
+    font-size: 4rem;
+    font-family: "Rubik", sans-serif;
+    color: var(--secondary);
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-signup {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.login-signup button {
+    width: 7.5rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.login-signup button a {
+    font-family: "DM Sans", system-ui;
+    font-size: 1.5rem;
+    background-color: var(--white);
+    color: var(--black);
+}

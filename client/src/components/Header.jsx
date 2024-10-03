@@ -11,7 +11,7 @@ export default function Header() {
             <section className="header-links">
                 <ul>
                     <li><a href="/login"> Login</a></li>
-                    <li><a href="/signup"> Signup</a></li>
+                    <li><a href="/signup"> Sign Up</a></li>
                 </ul>
             </section>
         </header>

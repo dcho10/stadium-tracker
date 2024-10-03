@@ -19,7 +19,9 @@ future developments:
 - be able to share with other users their progress
 - user will be able to add notes/comments about their experience at venue
 - track the number of times visited
+- track the number of visitors at each stadium
 - user ratings of each stadium visited
+- figure out password reset functionality
 
 database:
 - user database with saved progress on visited stadiums

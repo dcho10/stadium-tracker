@@ -4,6 +4,9 @@
     margin: 0;
     list-style-type: none;
     text-decoration: none;
+}
+
+body {
     background-color: var(--primary);
 }
 
@@ -11,6 +14,6 @@
     --primary: #1D428A;
     --secondary: #C8102E;
     --white: #FFFFFF;
-    --accent-one: #000000;
-    --accent-two: #E4E5E6;
+    --black: #000000;
+    --gray: #E4E5E6;
 }
