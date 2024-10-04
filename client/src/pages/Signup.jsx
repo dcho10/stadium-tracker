@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
@@ -7,39 +7,39 @@ import Auth from "../utils/auth";
 import "./Signup.css"
 
 export default function Signup() {
+    const [formState, setFormState] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+    });
+    const [addUser, { error }] = useMutation(ADD_USER);
+    const navigate = useNavigate();
 
-const [formState, setFormState] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-});
-const [addUser, { error }] = useMutation(ADD_USER);
-const navigate = useNavigate();
-
-const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormState({
-        ...formState,
-        [name]: value,
-    })
-}
-
-const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-        const { data } = await addUser({
-            variables: { ...formState },
-        });
-
-        Auth.login(data.addUser.token);
-
-        navigate("/");
-    } catch (err) {
-        console.error(err);
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        })
     }
-};
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+
+        try {
+            const { data } = await addUser({
+                variables: { ...formState },
+            });
+
+            Auth.login(data.addUser.token);
+
+            console.log("Sign up successful:", data)
+            navigate("/welcome");
+        } catch (err) {
+            console.error(err);
+        }
+    };
 
     return (
         <>

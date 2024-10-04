@@ -1,7 +1,7 @@
 const { User } = require("../models");
 const bcrypt = require("bcrypt");
 const { MLBModel, NBAModel, NFLModel, NHLModel } = require("../models")
-const { signToken, AuthenticationError } = require("../utils/auth");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
     Query: {
@@ -32,13 +32,13 @@ const resolvers = {
             const user = await User.findOne({ email });
 
             if (!user) {
-                throw new AuthenticationError
+                throw new Error("Incorrect email or password, please try again.")
             }
 
             const correctPass = await user.isCorrectPassword(password);
 
             if (!correctPass) {
-                throw new AuthenticationError
+                throw new Error("Incorrect email or password, please try again.")
             }
 
             console.log(user);

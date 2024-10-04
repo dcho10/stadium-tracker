@@ -57,3 +57,9 @@ h4 {
 .account-btns a {
     color: var(--white);
 }
+
+.form-error {
+    font-family: "DM Sans", system-ui;
+    opacity: 0.75;
+    text-align: center;
+}
