@@ -1,0 +1,37 @@
+.leagues {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+}
+
+h5 {
+    font-family: "Rubik", sans-serif;
+    font-size: 4rem;
+    color: var(--secondary);
+    text-align: center;
+}
+
+h6 {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.league-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.league-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.league-links img {
+    max-width: 75%;
+    height: auto;
+    display: block;
+}
