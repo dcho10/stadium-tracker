@@ -1,31 +1,31 @@
-.mlb-stadiums h1 {
+.nba-stadiums h1 {
     font-family: "Rubik", sans-serif;
     font-size: 4rem;
     color: var(--secondary);
     text-align: center;
 }
 
-.mlb-stadiums h2 {
+.nba-stadiums h2 {
     font-family: "Rubik", sans-serif;
     font-size: 2rem;
     text-align: center;
     color: var(--white);
 }
 
-.mlb-stadiums h3 {
+.nba-stadiums h3 {
     font-family: "Rubik", sans-serif;
     font-size: 1.5rem;
     text-align: center;
 }
 
-.mlb-stadiums {
+.nba-stadiums {
     display: grid;
     justify-content: center;
     gap: 1rem;
     padding: 0 1rem;
 }
 
-.mlb-container {
+.nba-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     font-family: "DM Sans", system-ui;
@@ -33,7 +33,7 @@
     gap: 1.25rem;
 }
 
-.mlb-container button {
+.nba-container button {
     width: 100%;
     color: var(--white);
     cursor: pointer;
@@ -41,16 +41,16 @@
     border-radius: 0.5rem;
 }
 
-.mlb-row {
+.nba-row {
     display: contents;
 }
 
-.mlb-list {
+.nba-list {
     display: flex;
     flex-direction: column;
 }
 
-.mlb-item {
+.nba-item {
     display: flex;
     align-items: center;
     margin: 0.5rem 0;

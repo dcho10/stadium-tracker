@@ -4,7 +4,7 @@
         "teamName": "Atlanta Hawks",
         "cityName": "Atlanta",
         "stateName": "GA",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Southeast"
     },
     {
@@ -12,7 +12,7 @@
         "teamName": "Boston Celtics",
         "cityName": "Boston",
         "stateName": "MA",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -20,7 +20,7 @@
         "teamName": "Brooklyn Nets",
         "cityName": "Brooklyn",
         "stateName": "NY",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -28,7 +28,7 @@
         "teamName": "Charlotte Hornets",
         "cityName": "Charlotte",
         "stateName": "NC",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Southeast"
     },
     {
@@ -36,7 +36,7 @@
         "teamName": "Chicago Bulls",
         "cityName": "Chicago",
         "stateName": "IL",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Central"
     },
     {
@@ -44,7 +44,7 @@
         "teamName": "Cleveland Cavaliers",
         "cityName": "Cleveland",
         "stateName": "OH",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Central"
     },
     {
@@ -52,7 +52,7 @@
         "teamName": "Dallas Mavericks",
         "cityName": "Dallas",
         "stateName": "TX",
-        "league": "Western",
+        "conference": "Western",
         "division": "Southwest"
     },
     {
@@ -60,7 +60,7 @@
         "teamName": "Denver Nuggets",
         "cityName": "Denver",
         "stateName": "CO",
-        "league": "Western",
+        "conference": "Western",
         "division": "Northwest"
     },
     {
@@ -68,7 +68,7 @@
         "teamName": "Detroit Pistons",
         "cityName": "Detroit",
         "stateName": "MI",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Central"
     },
     {
@@ -76,7 +76,7 @@
         "teamName": "Golden State Warriors",
         "cityName": "San Francisco",
         "stateName": "CA",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -84,7 +84,7 @@
         "teamName": "Houston Rockets",
         "cityName": "Houston",
         "stateName": "TX",
-        "league": "Western",
+        "conference": "Western",
         "division": "Southwest"
     },
     {
@@ -92,7 +92,7 @@
         "teamName": "Indiana Pacers",
         "cityName": "Indianapolis",
         "stateName": "IN",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Central"
     },
     {
@@ -100,7 +100,7 @@
         "teamName": "Los Angeles Clippers",
         "cityName": "Inglewood",
         "stateName": "CA",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -108,7 +108,7 @@
         "teamName": "Los Angeles Lakers",
         "cityName": "Los Angeles",
         "stateName": "CA",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -116,7 +116,7 @@
         "teamName": "Memphis Grizzlies",
         "cityName": "Memphis",
         "stateName": "TN",
-        "league": "Western",
+        "conference": "Western",
         "division": "Southwest"
     },
     {
@@ -124,7 +124,7 @@
         "teamName": "Miami Heat",
         "cityName": "Miami",
         "stateName": "FL",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Southeast"
     },
     {
@@ -132,7 +132,7 @@
         "teamName": "Milwaukee Bucks",
         "cityName": "Milwaukee",
         "stateName": "WI",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Central"
     },
     {
@@ -140,7 +140,7 @@
         "teamName": "Minnesota Timberwolves",
         "cityName": "Minneapolis",
         "stateName": "MN",
-        "league": "Western",
+        "conference": "Western",
         "division": "Northwest"
     },
     {
@@ -148,7 +148,7 @@
         "teamName": "New Orleans Pelicans",
         "cityName": "New Orleans",
         "stateName": "LA",
-        "league": "Western",
+        "conference": "Western",
         "division": "Southwest"
     },
     {
@@ -156,7 +156,7 @@
         "teamName": "New York Knicks",
         "cityName": "New York",
         "stateName": "NY",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -164,7 +164,7 @@
         "teamName": "Oklahoma City Thunder",
         "cityName": "Oklahoma City",
         "stateName": "OK",
-        "league": "Western",
+        "conference": "Western",
         "division": "Northwest"
     },
     {
@@ -172,7 +172,7 @@
         "teamName": "Orlando Magic",
         "cityName": "Orlando",
         "stateName": "FL",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Southeast"
     },
     {
@@ -180,7 +180,7 @@
         "teamName": "Philadelphia 76ers",
         "cityName": "Philadelphia",
         "stateName": "PA",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -188,7 +188,7 @@
         "teamName": "Phoenix Suns",
         "cityName": "Phoenix",
         "stateName": "AZ",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -196,7 +196,7 @@
         "teamName": "Portland Trail Blazers",
         "cityName": "Portland",
         "stateName": "OR",
-        "league": "Western",
+        "conference": "Western",
         "division": "Northwest"
     },
     {
@@ -204,7 +204,7 @@
         "teamName": "Sacramento Kings",
         "cityName": "Sacramento",
         "stateName": "CA",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -212,7 +212,7 @@
         "teamName": "San Antonio Spurs",
         "cityName": "San Antonio",
         "stateName": "TX",
-        "league": "Western",
+        "conference": "Western",
         "division": "Southwest"
     },
     {
@@ -220,7 +220,7 @@
         "teamName": "Toronto Raptors",
         "cityName": "Toronto",
         "stateName": "ON",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -228,7 +228,7 @@
         "teamName": "Utah Jazz",
         "cityName": "Salt Lake City",
         "stateName": "UT",
-        "league": "Western",
+        "conference": "Western",
         "division": "Northwest"
     },
     {
@@ -236,7 +236,7 @@
         "teamName": "Washington Wizards",
         "cityName": "Washington",
         "stateName": "DC",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Southeast"
     }
 ]

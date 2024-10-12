@@ -56,3 +56,43 @@ export const QUERY_MLB = gql `
       }
   }
 `
+
+export const QUERY_NBA = gql `
+  query nbaStadiums {
+    nbaStadiums {
+      _id
+      stadiumName
+      teamName
+      division
+      cityName
+      stateName
+    }
+  }
+`
+
+export const QUERY_NFL = gql `
+  query nflStadiums {
+    nflStadiums {
+      _id
+      stadiumName
+      teamName
+      cityName
+      conference
+      division
+      stateName
+    }
+  }
+`
+
+export const QUERY_NHL = gql `
+  query nhlStadiums {
+    nhlStadiums {
+      _id
+      stadiumName
+      teamName
+      division
+      cityName
+      stateName
+    }
+  }
+`

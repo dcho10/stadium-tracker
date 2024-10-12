@@ -35,12 +35,63 @@ export const ADD_MLB_VISIT = gql`
             firstName
             lastName
             baseballStadiums {
+                _id
                 stadiumName
                 teamName
                 hasVisited
                 dateVisited
-                _id
             }
+        }
     }
-}
+`
+
+export const ADD_NBA_VISIT = gql `
+    mutation addNBAVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
+        addNBAVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
+            _id
+            firstName
+            lastName
+            basketballStadiums {
+                _id
+                stadiumName
+                teamName
+                hasVisited
+                dateVisited
+            }
+        }
+    }
+`
+
+export const ADD_NFL_VISIT = gql `
+    mutation addNFLVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
+        addNFLVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
+            _id
+            firstName
+            lastName
+            footballStadiums {
+                _id
+                stadiumName
+                teamName
+                hasVisited
+                dateVisited
+            }
+        }
+    }
+`
+
+export const ADD_NHL_VISIT = gql `
+    mutation addNHLVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
+        addNHLVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
+            _id
+            firstName
+            lastName
+            basketballStadiums {
+                _id
+                stadiumName
+                teamName
+                hasVisited
+                dateVisited
+            }
+        }
+    }
 `

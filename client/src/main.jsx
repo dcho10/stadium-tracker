@@ -7,6 +7,9 @@ import Signup from "./pages/Signup.jsx"
 import Login from "./pages/Login.jsx"
 import Welcome from "./pages/Welcome.jsx"
 import MLB from "./pages/MLB.jsx"
+import NBA from "./pages/NBA.jsx"
+import NFL from "./pages/NFL.jsx"
+import NHL from "./pages/NHL.jsx"
 
 const router = createBrowserRouter([
     {
@@ -33,6 +36,18 @@ const router = createBrowserRouter([
             {
                 path: "/mlb",
                 element: <MLB />
+            },
+            {
+                path: "/nba",
+                element: <NBA />
+            },
+            {
+                path: "/nfl",
+                element: <NFL />
+            },
+            {
+                path: "/nhl",
+                element: <NHL />
             }
         ]
     },

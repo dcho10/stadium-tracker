@@ -1,13 +1,13 @@
 import { useQuery, useMutation } from "@apollo/client";
 import { useEffect, useState } from "react";
 import Calendar from "react-calendar";
-import { QUERY_USER, QUERY_MLB } from "../utils/queries";
-import { ADD_MLB_VISIT } from "../utils/mutations";
+import { QUERY_USER, QUERY_NBA } from "../utils/queries";
+import { ADD_NBA_VISIT } from "../utils/mutations";
 import AuthService from "../utils/auth";
 
-import "./MLB.css"
+import "./NBA.css"
 
-export default function MLB() {
+export default function NBA() {
   const user = AuthService.getUser();
   const userId = user.data._id;
   const firstName = user.data.firstName
@@ -16,8 +16,8 @@ export default function MLB() {
     variables: { userId },
   })
 
-  const { loading: loadingMLB, error: errorMLB, data: mlbData } = useQuery(QUERY_MLB)
-  const stadiums = mlbData?.mlbStadiums || [];
+  const { loading: loadingNBA, error: errorNBA, data: nbaData } = useQuery(QUERY_NBA)
+  const stadiums = nbaData?.nbaStadiums || [];
 
   const [visitedStadiums, setVisitedStadiums] = useState({});
   const [selectedStadium, setSelectedStadium] = useState(null);
@@ -25,12 +25,12 @@ export default function MLB() {
   const [dateVisited, setDateVisited] = useState(null);
   const [visitedCount, setVisitedCount] = useState(0);
 
-  const [addMLBVisit] = useMutation(ADD_MLB_VISIT);
+  const [addNBAVisit] = useMutation(ADD_NBA_VISIT);
 
   useEffect(() => {
-    if (userData?.user?.baseballStadiums) {
+    if (userData?.user?.basketballStadiums) {
       const visited = {};
-      userData.user.baseballStadiums.forEach((stadium) => {
+      userData.user.basketballStadiums.forEach((stadium) => {
         if (stadium.hasVisited) {
           visited[stadium.stadiumId] = true;
         }
@@ -54,7 +54,7 @@ export default function MLB() {
     setCalendarVisible(false);
 
     try {
-      await addMLBVisit({
+      await addNBAVisit({
         variables: {
           userId,
           stadiumId: selectedStadium._id,
@@ -67,13 +67,15 @@ export default function MLB() {
   }
 
   const divisionGroups = {
-    "AL East": [],
-    "AL Central": [],
-    "AL West": [],
-    "NL East": [],
-    "NL Central": [],
-    "NL West": [],
+    "Atlantic": [],
+    "Central": [],
+    "Southeast": [],
+    "Northwest": [],
+    "Pacific": [],
+    "Southwest": [],
   };
+
+  console.log(divisionGroups);
 
   stadiums.forEach((stadium) => {
     const { division } = stadium;
@@ -88,17 +90,17 @@ export default function MLB() {
 
   return (
     <>
-    <section className="mlb-stadiums">
-      <h1> MLB </h1>
+    <section className="nba-stadiums">
+      <h1> NBA </h1>
       <h2> {firstName}, which stadiums have you recently visited? </h2>
 
-      <section className="mlb-container">
-        <section className="mlb-row">
-          {["AL East", "AL Central", "AL West"].map((division) => (
-            <section className="mlb-list" key={division}>
+      <section className="nba-container">
+        <section className="nba-row">
+          {["Atlantic", "Central", "Southeast"].map((division) => (
+            <section className="nba-list" key={division}>
               <h3>{division}</h3>
               {divisionGroups[division].map((stadium) => (
-                <section className="mlb-item" key={stadium._id}>
+                <section className="nba-item" key={stadium._id}>
                   <button
                     type="button"
                     className={visitedStadiums[stadium._id] ? "visited" : "not-visited"}
@@ -113,13 +115,13 @@ export default function MLB() {
         </section>
       </section>
 
-      <section className="mlb-container">
-        <section className="mlb-row">
-          {["NL East", "NL Central", "NL West"].map((division) => (
-            <section className="mlb-list" key={division}>
+      <section className="nba-container">
+        <section className="nba-row">
+          {["Northwest", "Pacific", "Southwest"].map((division) => (
+            <section className="nba-list" key={division}>
               <h3>{division}</h3>
               {divisionGroups[division].map((stadium) => (
-                <section className="mlb-item" key={stadium._id}>
+                <section className="nba-item" key={stadium._id}>
                   <button
                     type="button"
                     className={visitedStadiums[stadium._id] ? "visited" : "not-visited"}

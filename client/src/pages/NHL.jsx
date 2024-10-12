@@ -1,13 +1,13 @@
 import { useQuery, useMutation } from "@apollo/client";
 import { useEffect, useState } from "react";
 import Calendar from "react-calendar";
-import { QUERY_USER, QUERY_MLB } from "../utils/queries";
-import { ADD_MLB_VISIT } from "../utils/mutations";
+import { QUERY_USER, QUERY_NHL } from "../utils/queries";
+import { ADD_NHL_VISIT } from "../utils/mutations";
 import AuthService from "../utils/auth";
 
-import "./MLB.css"
+import "./NHL.css"
 
-export default function MLB() {
+export default function NHL() {
   const user = AuthService.getUser();
   const userId = user.data._id;
   const firstName = user.data.firstName
@@ -16,8 +16,8 @@ export default function MLB() {
     variables: { userId },
   })
 
-  const { loading: loadingMLB, error: errorMLB, data: mlbData } = useQuery(QUERY_MLB)
-  const stadiums = mlbData?.mlbStadiums || [];
+  const { loading: loadingNHL, error: errorNHL, data: nhlData } = useQuery(QUERY_NHL)
+  const stadiums = nhlData?.nhlStadiums || [];
 
   const [visitedStadiums, setVisitedStadiums] = useState({});
   const [selectedStadium, setSelectedStadium] = useState(null);
@@ -25,12 +25,12 @@ export default function MLB() {
   const [dateVisited, setDateVisited] = useState(null);
   const [visitedCount, setVisitedCount] = useState(0);
 
-  const [addMLBVisit] = useMutation(ADD_MLB_VISIT);
+  const [addNHLVisit] = useMutation(ADD_NHL_VISIT);
 
   useEffect(() => {
-    if (userData?.user?.baseballStadiums) {
+    if (userData?.user?.hockeyStadiums) {
       const visited = {};
-      userData.user.baseballStadiums.forEach((stadium) => {
+      userData.user.hockeyStadiums.forEach((stadium) => {
         if (stadium.hasVisited) {
           visited[stadium.stadiumId] = true;
         }
@@ -54,25 +54,29 @@ export default function MLB() {
     setCalendarVisible(false);
 
     try {
-      await addMLBVisit({
+      await addNHLVisit({
         variables: {
           userId,
           stadiumId: selectedStadium._id,
           dateVisited: date.toISOString(),
         }
-      })
+      });
+
+      setVisitedStadiums((prev) => ({
+        ...prev,
+        [selectedStadium._id]: true, 
+      }));
+
     } catch (err) {
       console.error("Error adding visit", err)
     }
   }
 
   const divisionGroups = {
-    "AL East": [],
-    "AL Central": [],
-    "AL West": [],
-    "NL East": [],
-    "NL Central": [],
-    "NL West": [],
+    "Atlantic": [],
+    "Metropolitan": [],
+    "Central": [],
+    "Pacific": [],
   };
 
   stadiums.forEach((stadium) => {
@@ -88,17 +92,17 @@ export default function MLB() {
 
   return (
     <>
-    <section className="mlb-stadiums">
-      <h1> MLB </h1>
+    <section className="nhl-stadiums">
+      <h1> NHL </h1>
       <h2> {firstName}, which stadiums have you recently visited? </h2>
 
-      <section className="mlb-container">
-        <section className="mlb-row">
-          {["AL East", "AL Central", "AL West"].map((division) => (
-            <section className="mlb-list" key={division}>
+      <section className="nhl-container">
+        <section className="nhl-row">
+          {["Atlantic", "Metropolitan"].map((division) => (
+            <section className="nhl-list" key={division}>
               <h3>{division}</h3>
               {divisionGroups[division].map((stadium) => (
-                <section className="mlb-item" key={stadium._id}>
+                <section className="nhl-item" key={stadium._id}>
                   <button
                     type="button"
                     className={visitedStadiums[stadium._id] ? "visited" : "not-visited"}
@@ -113,13 +117,13 @@ export default function MLB() {
         </section>
       </section>
 
-      <section className="mlb-container">
-        <section className="mlb-row">
-          {["NL East", "NL Central", "NL West"].map((division) => (
-            <section className="mlb-list" key={division}>
+      <section className="nhl-container">
+        <section className="nhl-row">
+          {["Central", "Pacific"].map((division) => (
+            <section className="nhl-list" key={division}>
               <h3>{division}</h3>
               {divisionGroups[division].map((stadium) => (
-                <section className="mlb-item" key={stadium._id}>
+                <section className="nhl-item" key={stadium._id}>
                   <button
                     type="button"
                     className={visitedStadiums[stadium._id] ? "visited" : "not-visited"}

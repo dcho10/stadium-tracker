@@ -1,39 +1,39 @@
-.mlb-stadiums h1 {
+.league-stadiums h1 {
     font-family: "Rubik", sans-serif;
     font-size: 4rem;
     color: var(--secondary);
     text-align: center;
 }
 
-.mlb-stadiums h2 {
+.league-stadiums h2 {
     font-family: "Rubik", sans-serif;
     font-size: 2rem;
     text-align: center;
     color: var(--white);
 }
 
-.mlb-stadiums h3 {
+.league-stadiums h3 {
     font-family: "Rubik", sans-serif;
     font-size: 1.5rem;
     text-align: center;
 }
 
-.mlb-stadiums {
+.league-stadiums {
     display: grid;
     justify-content: center;
     gap: 1rem;
     padding: 0 1rem;
 }
 
-.mlb-container {
+.stadium-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     font-family: "DM Sans", system-ui;
     text-align: center;
     gap: 1.25rem;
 }
 
-.mlb-container button {
+.stadium-container button {
     width: 100%;
     color: var(--white);
     cursor: pointer;
@@ -41,16 +41,16 @@
     border-radius: 0.5rem;
 }
 
-.mlb-row {
+.stadium-row {
     display: contents;
 }
 
-.mlb-list {
+.stadiums-list {
     display: flex;
     flex-direction: column;
 }
 
-.mlb-item {
+.stadium-item {
     display: flex;
     align-items: center;
     margin: 0.5rem 0;

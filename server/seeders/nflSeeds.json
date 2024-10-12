@@ -4,7 +4,7 @@
         "teamName": "Arizona Cardinals",
         "cityName": "Glendale",
         "stateName": "AZ",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "West"
     },
     {
@@ -12,7 +12,7 @@
         "teamName": "Atlanta Falcons",
         "cityName": "Atlanta",
         "stateName": "GA",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "South"
     },
     {
@@ -20,7 +20,7 @@
         "teamName": "Baltimore Ravens",
         "cityName": "Baltimore",
         "stateName": "MD",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "North"
     },
     {
@@ -28,7 +28,7 @@
         "teamName": "Buffalo Bills",
         "cityName": "Orchard Park",
         "stateName": "NY",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "East"
     },
     {
@@ -36,7 +36,7 @@
         "teamName": "Carolina Panthers",
         "cityName": "Charlotte",
         "stateName": "NC",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "South"
     },
     {
@@ -44,7 +44,7 @@
         "teamName": "Chicago Bears",
         "cityName": "Chicago",
         "stateName": "IL",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "North"
     },
     {
@@ -52,7 +52,7 @@
         "teamName": "Cincinnati Bengals",
         "cityName": "Cincinnati",
         "stateName": "OH",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "North"
     },
     {
@@ -60,7 +60,7 @@
         "teamName": "Cleveland Browns",
         "cityName": "Cleveland",
         "stateName": "OH",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "North"
     },
     {
@@ -68,7 +68,7 @@
         "teamName": "Dallas Cowboys",
         "cityName": "Arlington",
         "stateName": "TX",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "East"
     },
     {
@@ -76,7 +76,7 @@
         "teamName": "Denver Broncos",
         "cityName": "Denver",
         "stateName": "CO",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "West"
     },
     {
@@ -84,7 +84,7 @@
         "teamName": "Detroit Lions",
         "cityName": "Detroit",
         "stateName": "MI",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "North"
     },
     {
@@ -92,7 +92,7 @@
         "teamName": "Green Bay Packers",
         "cityName": "Green Bay",
         "stateName": "WI",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "North"
     },
     {
@@ -100,7 +100,7 @@
         "teamName": "Houston Texans",
         "cityName": "Houston",
         "stateName": "TX",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "South"
     },
     {
@@ -108,7 +108,7 @@
         "teamName": "Indianapolis Colts",
         "cityName": "Indianapolis",
         "stateName": "IN",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "South"
     },
     {
@@ -116,7 +116,7 @@
         "teamName": "Jacksonville Jaguars",
         "cityName": "Jacksonville",
         "stateName": "FL",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "South"
     },
     {
@@ -124,7 +124,7 @@
         "teamName": "Kansas City Chiefs",
         "cityName": "Kansas City",
         "stateName": "MO",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "West"
     },
     {
@@ -132,7 +132,7 @@
         "teamName": "Las Vegas Raiders",
         "cityName": "Paradise",
         "stateName": "NV",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "West"
     },
     {
@@ -140,7 +140,7 @@
         "teamName": "Los Angeles Rams",
         "cityName": "Inglewood",
         "stateName": "CA",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "West"
     },
     {
@@ -148,7 +148,7 @@
         "teamName": "Los Angeles Chargers",
         "cityName": "Inglewood",
         "stateName": "CA",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "West"
     },
     {
@@ -156,7 +156,7 @@
         "teamName": "Miami Dolphins",
         "cityName": "Miami Gardens",
         "stateName": "FL",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "East"
     },
     {
@@ -164,7 +164,7 @@
         "teamName": "Minnesota Vikings",
         "cityName": "Minneapolis",
         "stateName": "MN",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "North"
     },
     {
@@ -172,7 +172,7 @@
         "teamName": "New England Patriots",
         "cityName": "Foxborough",
         "stateName": "MA",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "East"
     },
     {
@@ -180,7 +180,7 @@
         "teamName": "New Orleans Saints",
         "cityName": "New Orleans",
         "stateName": "LA",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "South"
     },
     {
@@ -188,7 +188,7 @@
         "teamName": "New York Giants",
         "cityName": "East Rutherford",
         "stateName": "NJ",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "East"
     },
     {
@@ -196,7 +196,7 @@
         "teamName": "New York Jets",
         "cityName": "East Rutherford",
         "stateName": "NJ",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "East"
     },
     {
@@ -204,7 +204,7 @@
         "teamName": "Philadelphia Eagles",
         "cityName": "Philadelphia",
         "stateName": "PA",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "East"  
     },
     {
@@ -212,7 +212,7 @@
         "teamName": "Pittsburgh Steelers",
         "cityName": "Pittsburgh",
         "stateName": "PA",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "North"
     },
     {
@@ -220,7 +220,7 @@
         "teamName": "San Francisco 49ers",
         "cityName": "Santa Clara",
         "stateName": "CA",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "West"
     },
     {
@@ -228,7 +228,7 @@
         "teamName": "Seattle Seahawks",
         "cityName": "Seattle",
         "stateName": "WA",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "West"
     },
     {
@@ -236,7 +236,7 @@
         "teamName": "Tampa Bay Buccaneers",
         "cityName": "Tampa",
         "stateName": "FL",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "South"
     },
     {
@@ -244,7 +244,7 @@
         "teamName": "Tennessee Titans",
         "cityName": "Nashville",
         "stateName": "TN",
-        "league": "AFC",
+        "conference": "AFC",
         "division": "South"
     },
     {
@@ -252,7 +252,7 @@
         "teamName": "Washington Commanders",
         "cityName": "Landover",
         "stateName": "MD",
-        "league": "NFC",
+        "conference": "NFC",
         "division": "East"
     }
 ]

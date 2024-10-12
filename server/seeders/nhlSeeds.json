@@ -4,7 +4,7 @@
         "teamName": "Anaheim Ducks",
         "cityName": "Anaheim",
         "stateName": "CA",
-        "league": "Western",
+        "conference": "Western",
         "division": "Central"
     },
     {
@@ -12,7 +12,7 @@
         "teamName": "Boston Bruins",
         "cityName": "Boston",
         "stateName": "MA",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -20,7 +20,7 @@
         "teamName": "Buffalo Sabres",
         "cityName": "Buffalo",
         "stateName": "NY",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -28,7 +28,7 @@
         "teamName": "Calgary Flames",
         "cityName": "Calgary",
         "stateName": "AB",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -36,7 +36,7 @@
         "teamName": "Carolina Hurricanes",
         "cityName": "Raleigh",
         "stateName": "NC",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Metropolitan"
     },
     {
@@ -44,7 +44,7 @@
         "teamName": "Chicago Blackhawks",
         "cityName": "Chicago",
         "stateName": "IL",
-        "league": "Western",
+        "conference": "Western",
         "division": "Central"
     },
     {
@@ -52,7 +52,7 @@
         "teamName": "Colorado Avalanche",
         "cityName": "Denver",
         "stateName": "CO",
-        "league": "Western",
+        "conference": "Western",
         "division": "Central"
     },
     {
@@ -60,7 +60,7 @@
         "teamName": "Columbus Blue Jackets",
         "cityName": "Columbus",
         "stateName": "OH",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Metropolitan"
     },
     {
@@ -68,7 +68,7 @@
         "teamName": "Dallas Stars",
         "cityName": "Dallas",
         "stateName": "TX",
-        "league": "Western",
+        "conference": "Western",
         "division": "Central"
     },
     {
@@ -76,7 +76,7 @@
         "teamName": "Detroit Red Wings",
         "cityName": "Detroit",
         "stateName": "MI",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -84,7 +84,7 @@
         "teamName": "Edmonton Oilers",
         "cityName": "Edmonton",
         "stateName": "AB",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -92,7 +92,7 @@
         "teamName": "Florida Panthers",
         "cityName": "Sunrise",
         "stateName": "FL",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -100,7 +100,7 @@
         "teamName": "Los Angeles Kings",
         "cityName": "Los Angeles",
         "stateName": "CA",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -108,7 +108,7 @@
         "teamName": "Minnesota Wild",
         "cityName": "Saint Paul",
         "stateName": "MN",
-        "league": "Western",
+        "conference": "Western",
         "division": "Central"
     },
     {
@@ -116,7 +116,7 @@
         "teamName": "Montreal Canadiens",
         "cityName": "Montreal",
         "stateName": "QC",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -124,7 +124,7 @@
         "teamName": "Nashville Predators",
         "cityName": "Nashville",
         "stateName": "TN",
-        "league": "Western",
+        "conference": "Western",
         "division": "Central"
     },
     {
@@ -132,7 +132,7 @@
         "teamName": "New Jersey Devils",
         "cityName": "Newark",
         "stateName": "NJ",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Metropolitan"
     },
     {
@@ -140,7 +140,7 @@
         "teamName": "New York Islanders",
         "cityName": "Elmont",
         "stateName": "NY",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Metropolitan"
     },
     {
@@ -148,7 +148,7 @@
         "teamName": "New York Rangers",
         "cityName": "New York City",
         "stateName": "NY",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Metropolitan"
     },
     {
@@ -156,7 +156,7 @@
         "teamName": "Ottawa Senators",
         "cityName": "Ottawa",
         "stateName": "ON",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -164,7 +164,7 @@
         "teamName": "Philadelphia Flyers",
         "cityName": "Philadelphia",
         "stateName": "PA",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Metropolitan"
     },
     {
@@ -172,7 +172,7 @@
         "teamName": "Pittsburgh Penguins",
         "cityName": "Pittsburgh",
         "stateName": "PA",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Metropolitan"
     },
     {
@@ -180,7 +180,7 @@
         "teamName": "San Jose Sharks",
         "cityName": "San Jose",
         "stateName": "CA",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -188,7 +188,7 @@
         "teamName": "Seattle Kraken",
         "cityName": "Seattle",
         "stateName": "WA",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -196,7 +196,7 @@
         "teamName": "St. Louis Blues",
         "cityName": "St. Louis",
         "stateName": "MO",
-        "league": "Western",
+        "conference": "Western",
         "division": "Central"
     },
     {
@@ -204,7 +204,7 @@
         "teamName": "Tampa Bay Lightning",
         "cityName": "Tampa",
         "stateName": "FL",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -212,7 +212,7 @@
         "teamName": "Toronto Maple Leafs",
         "cityName": "Toronto",
         "stateName": "ON",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Atlantic"
     },
     {
@@ -220,7 +220,7 @@
         "teamName": "Utah Hockey Club",
         "cityName": "Salt Lake City",
         "stateName": "UT",
-        "league": "Western",
+        "conference": "Western",
         "division": "Central"
     },
     {
@@ -228,7 +228,7 @@
         "teamName": "Vancouver Canucks",
         "cityName": "Vancouver",
         "stateName": "BC",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -236,7 +236,7 @@
         "teamName": "Vegas Golden Knights",
         "cityName": "Paradise",
         "stateName": "NV",
-        "league": "Western",
+        "conference": "Western",
         "division": "Pacific"
     },
     {
@@ -244,7 +244,7 @@
         "teamName": "Washington Capitals",
         "cityName": "Washington",
         "stateName": "DC",
-        "league": "Eastern",
+        "conference": "Eastern",
         "division": "Metropolitan"
     },
     {
@@ -252,7 +252,7 @@
         "teamName": "Winnipeg Jets",
         "cityName": "Winnipeg",
         "stateName": "MB",
-        "league": "Western",
+        "conference": "Western",
         "division": "Central"
     }
 ]

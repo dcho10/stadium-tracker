@@ -52,6 +52,7 @@ const typeDefs = `
         stadiumName: String
         teamName: String
         cityName: String
+        conference: String
         division: String
         stateName: String
     }
