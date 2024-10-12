@@ -44,27 +44,26 @@ export default function Signup() {
     return (
         <>
             <form onSubmit={handleFormSubmit}className="signup-form">
-                <h3> Sign Up </h3>
+                <h1> Sign Up </h1>
                 <section>
-                    <h4> First Name* </h4>
+                    <h2> First Name* </h2>
                     <input type="text" placeholder="First Name" name="firstName" value={formState.firstName} onChange={handleChange}></input>
                 </section>
                 <section>
-                    <h4> Last Name </h4>
+                    <h2> Last Name </h2>
                     <input type="text" placeholder="Last Name" name="lastName" value={formState.lastName} onChange={handleChange}></input>
                 </section>
                 <section>
-                    <h4> Email* </h4>
+                    <h2> Email* </h2>
                     <input type="text" placeholder="Email" name="email" value={formState.email} onChange={handleChange}></input>
                 </section>
                 <section>
-                    <h4> Password* </h4>
+                    <h2> Password* </h2>
                     <input type="password" placeholder="Password" name="password" value={formState.password} onChange={handleChange}></input>
                 </section>
                 <p> *Required </p>
                 <section className="account-btns">
                     <button type="submit"> Sign Up</button>
-                    <button type="button"><a href="/login"> Login </a></button>
                 </section>
                 {error && (
                 <section className="form-error">

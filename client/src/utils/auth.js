@@ -4,7 +4,6 @@ class AuthService {
     getUser() {
         const token = this.getToken();
         const decoded = token ? decode(token) : null;
-        console.log('Decoded User:', decoded);
         return decoded;
     }
 

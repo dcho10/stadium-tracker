@@ -27,3 +27,5 @@ database:
 - user database with saved progress on visited stadiums
 - sports league database (i.e. MLB, NBA, etc)
 - team database with stadium name and brief history (i.e. Chicago Cubs, Wrigley Field)
+
+apikey: AIzaSyDnghCmWaPd18OpCL7MUqyWdoq5AX3xRQs

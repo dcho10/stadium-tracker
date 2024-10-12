@@ -4,17 +4,18 @@
     gap: 2rem;
 }
 
-h5 {
+.leagues h1 {
     font-family: "Rubik", sans-serif;
     font-size: 4rem;
     color: var(--secondary);
     text-align: center;
 }
 
-h6 {
+.leagues p {
     font-family: "Rubik", sans-serif;
     font-size: 1.75rem;
     text-align: center;
+    font-weight: bold;
 }
 
 .league-links {

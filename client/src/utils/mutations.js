@@ -15,7 +15,7 @@ export const ADD_USER = gql`
     }
 `;
 
-export const LOGIN = gql `
+export const LOGIN = gql`
     mutation login($email: String!, $password: String!) {
         login(email: $email, password: $password) {
             token
@@ -26,4 +26,21 @@ export const LOGIN = gql `
             }
         }
     }
+`
+
+export const ADD_MLB_VISIT = gql`
+    mutation addMLBVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
+        addMLBVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
+            _id
+            firstName
+            lastName
+            baseballStadiums {
+                stadiumName
+                teamName
+                hasVisited
+                dateVisited
+                _id
+            }
+    }
+}
 `

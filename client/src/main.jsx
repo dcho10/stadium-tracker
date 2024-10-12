@@ -6,6 +6,7 @@ import Home from "./pages/Home.jsx"
 import Signup from "./pages/Signup.jsx"
 import Login from "./pages/Login.jsx"
 import Welcome from "./pages/Welcome.jsx"
+import MLB from "./pages/MLB.jsx"
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: "/welcome",
                 element: <Welcome />
+            },
+            {
+                path: "/mlb",
+                element: <MLB />
             }
         ]
     },

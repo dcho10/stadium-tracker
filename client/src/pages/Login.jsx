@@ -47,17 +47,16 @@ export default function Login() {
 
     return (
         <form onSubmit={handleFormSubmit} className="login-form" >
-        <h3> Login </h3>
+        <h1> Login </h1>
         <section>
-            <h4> Email </h4>
+            <h2> Email </h2>
             <input type="email" placeholder="Email" name="email" value={formState.email} onChange={handleChange}></input>
         </section>
         <section>
-            <h4> Password </h4>
+            <h2> Password </h2>
             <input type="password" placeholder="Password" name="password" value={formState.password} onChange={handleChange}></input>
         </section>
         <section className="account-btns">
-            <button type="button"><a href="/signup"> Sign Up </a></button>
             <button type="submit"> Login </button>
         </section>
         {error && (

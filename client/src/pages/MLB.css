@@ -1,0 +1,183 @@
+.league-stadiums h1 {
+    font-family: "Rubik", sans-serif;
+    font-size: 4rem;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.league-stadiums h2 {
+    font-family: "Rubik", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.league-stadiums h3 {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.league-stadiums {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.stadium-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: "DM Sans", system-ui;
+    text-align: center;
+    gap: 1.25rem;
+}
+
+.stadium-container button {
+    width: 100%;
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.stadium-row {
+    display: contents;
+}
+
+.stadiums-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.stadium-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.visited {
+    background-color: green;
+}
+
+.not-visited {
+    background-color: var(--secondary);
+}
+
+.calendar-popup {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 2rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    z-index: 10;
+}
+
+.calendar-popup h4 {
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 1rem 0;
+}
+
+.react-calendar {
+    width: 25rem;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.react-calendar__navigation button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.react-calendar__navigation__label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.react-calendar__month-view__weekdays {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    color: #555;
+    text-align: center;
+}
+
+.react-calendar__month-view__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 0.75rem;
+}
+
+.react-calendar__tile {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.react-calendar__tile:hover {
+    background-color: #f0f0f0;
+}
+
+.react-calendar__tile--now {
+    background-color: #ff5a5f;
+    color: white;
+    font-weight: bold;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: #ccc;
+}
+
+.react-calendar__tile--active {
+    background-color: #00aaff;
+    color: white;
+}
+
+.react-calendar__tile:focus {
+    outline: none;
+}
+
+.close-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .calendar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+  

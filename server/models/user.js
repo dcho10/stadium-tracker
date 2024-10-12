@@ -1,10 +1,5 @@
-const { Schema, model } = require("mongoose");
+const { Schema, Types, model } = require("mongoose");
 const bcrypt = require("bcrypt");
-
-const { MLBSchema } = require("./baseballStadiums");
-const { NBASchema } = require("./basketballStadiums");
-const { NFLSchema } = require("./footballStadiums");
-const { NHLSchema } = require("./hockeyStadiums");
 
 const userSchema = new Schema({
     firstName: {
@@ -29,10 +24,102 @@ const userSchema = new Schema({
         required: true,
         minLength: 12,
     },
-    baseballStadiums: [MLBSchema],
-    basketballStadiums: [NBASchema],
-    footballStadiums: [NFLSchema],
-    hockeyStadiums: [NHLSchema],
+    baseballStadiums: [
+        {
+            stadiumId: {
+              type: Schema.Types.ObjectId,
+              ref: "MLBModel",
+            },
+            stadiumName: {
+                type: String,
+                required: true,
+            },
+            teamName: {
+                type: String,
+                required: true,
+            },
+            hasVisited: {
+              type: Boolean,
+              default: false,
+            },
+            dateVisited: {
+              type: Date,
+              default: null,
+            },
+        },
+    ],
+    footballStadiums: [
+        {
+            stadiumId: {
+              type: Schema.Types.ObjectId,
+              ref: "NFLModel",
+            },
+            stadiumName: {
+                type: String,
+                required: true,
+            },
+            teamName: {
+                type: String,
+                required: true,
+            },
+            hasVisited: {
+              type: Boolean,
+              default: false,
+            },
+            dateVisited: {
+              type: Date,
+              default: null,
+            },
+        },
+    ],
+    basketballStadiums: [
+        {
+            stadiumId: {
+              type: Schema.Types.ObjectId,
+              ref: "NBAModel",
+            },
+            stadiumName: {
+                type: String,
+                required: true,
+            },
+            teamName: {
+                type: String,
+                required: true,
+            },
+            hasVisited: {
+              type: Boolean,
+              default: false,
+            },
+            dateVisited: {
+              type: Date,
+              default: null,
+            },
+        },
+    ],
+    hockeyStadiums: [
+        {
+            stadiumId: {
+              type: Schema.Types.ObjectId,
+              ref: "NHLModel",
+            },
+            stadiumName: {
+                type: String,
+                required: true,
+            },
+            teamName: {
+                type: String,
+                required: true,
+            },
+            hasVisited: {
+              type: Boolean,
+              default: false,
+            },
+            dateVisited: {
+              type: Date,
+              default: null,
+            },
+        },
+    ],
 })
 
 userSchema.pre("save", async function (next) {

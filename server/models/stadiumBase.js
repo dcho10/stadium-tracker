@@ -1,10 +1,6 @@
-const { Schema, Types } = require("mongoose");
+const { Schema } = require("mongoose");
 
 const stadiumBaseSchema = new Schema({
-    stadiumId: {
-        type: Schema.Types.ObjectId,
-        default: () => new Types.ObjectId(),
-    },
     stadiumName: {
         type: String,
         required: true,
@@ -18,14 +14,6 @@ const stadiumBaseSchema = new Schema({
     },
     stateName: {
         type: String,
-    },
-    hasVisited: {
-        type: Boolean,
-        required: true,
-        default: false,
-    },
-    dateVisited: {
-        type: Date,
     }
 }, {
     _id: false

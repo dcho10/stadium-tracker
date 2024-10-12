@@ -5,40 +5,37 @@ const typeDefs = `
         lastName: String
         email: String
         password: String
-        baseballStadiums: [MLBStadium]
-        basketballStadiums: [NBAStadium]
-        footballStadiums: [NFLStadium]
-        hockeyStadiums: [NHLStadium]
+        baseballStadiums: [Visit]
+        basketballStadiums: [Visit]
+        footballStadiums: [Visit]
+        hockeyStadiums: [Visit]
     }
 
     interface Stadium {
         _id: ID
         stadiumName: String
         teamName: String
+        division: String
         cityName: String
         stateName: String
-        hasVisited: Boolean
-        dateVisited: String
     }
 
     type MLBStadium implements Stadium {
         _id: ID
         stadiumName: String
         teamName: String
+        division: String
         cityName: String
-        stateName: String
-        hasVisited: Boolean
-        dateVisited: String    
+        stateName: String   
     }
 
     type NBAStadium implements Stadium {
         _id: ID
         stadiumName: String
         teamName: String
+        division: String
         cityName: String
         stateName: String
-        hasVisited: Boolean
-        dateVisited: String
     }
 
     type NHLStadium implements Stadium {
@@ -46,9 +43,8 @@ const typeDefs = `
         stadiumName: String
         teamName: String
         cityName: String
+        division: String
         stateName: String
-        hasVisited: Boolean
-        dateVisited: String
     }
 
     type NFLStadium implements Stadium {
@@ -56,9 +52,8 @@ const typeDefs = `
         stadiumName: String
         teamName: String
         cityName: String
+        division: String
         stateName: String
-        hasVisited: Boolean
-        dateVisited: String
     }
 
     type Auth {
@@ -66,10 +61,22 @@ const typeDefs = `
         user: User
     }
 
+    type Visit {
+        _id: ID
+        stadiumId: ID!
+        stadiumName: String
+        teamName: String
+        hasVisited: Boolean
+        dateVisited: String
+    }
+
     type Query {
         users: [User]
         user(userId: ID!): User
-        me: User
+        mlbStadiums: [MLBStadium]
+        nflStadiums: [NFLStadium]
+        nbaStadiums: [NBAStadium]
+        nhlStadiums: [NHLStadium]
     }
 
     type Mutation {
@@ -79,9 +86,21 @@ const typeDefs = `
 
         login(email: String!, password: String!): Auth
 
-        addVisit(userId: ID!, stadiumLeague: String, stadiumId: ID!, dateVisited: String!): User
+        addMLBVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
 
-        deleteVisit(userId: ID!, stadiumLeague: String, stadiumId: ID!): User
+        addNFLVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
+
+        addNBAVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
+
+        addNHLVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
+
+        deleteMLBVisit(userId: ID!, stadiumId: ID!): User
+
+        deleteNFLVisit(userId: ID!, stadiumId: ID!): User
+
+        deleteNBAVisit(userId: ID!, stadiumId: ID!): User
+
+        deleteNHLVisit(userId: ID!, stadiumId: ID!): User
     }
 `;
 

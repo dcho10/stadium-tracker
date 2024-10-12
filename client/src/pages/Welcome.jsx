@@ -23,8 +23,8 @@ export default function Welcome() {
     return (
         <>
         <section className="leagues">
-            <h5> Welcome, {firstName}!</h5>
-            <h6> Which league would you like to visit? </h6>
+            <h1> Welcome, {firstName}!</h1>
+            <p> Which league would you like to visit? </p>
             <section className="league-links">
                 <a href="/nfl"><img src={NFLLogo}/></a>
                 <a href="/nba"><img src={NBALogo}/></a>
