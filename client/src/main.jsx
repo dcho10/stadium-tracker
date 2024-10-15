@@ -5,6 +5,7 @@ import App from "./App.jsx"
 import Home from "./pages/Home.jsx"
 import Signup from "./pages/Signup.jsx"
 import Login from "./pages/Login.jsx"
+import Profile from "./pages/Profile.jsx"
 import Welcome from "./pages/Welcome.jsx"
 import MLB from "./pages/MLB.jsx"
 import NBA from "./pages/NBA.jsx"
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login />
+            },
+            {
+                path: "/profile/:id",
+                element: <Profile />
             },
             {
                 path: "/welcome",

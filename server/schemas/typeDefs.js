@@ -88,19 +88,18 @@ const typeDefs = `
         login(email: String!, password: String!): Auth
 
         addMLBVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
-
         addNFLVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
-
         addNBAVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
-
         addNHLVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
 
+        editMLBVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
+        editNFLVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
+        editNBAVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
+        editNHLVisit(userId: ID!, stadiumId: ID!, dateVisited: String!): User
+
         deleteMLBVisit(userId: ID!, stadiumId: ID!): User
-
         deleteNFLVisit(userId: ID!, stadiumId: ID!): User
-
         deleteNBAVisit(userId: ID!, stadiumId: ID!): User
-
         deleteNHLVisit(userId: ID!, stadiumId: ID!): User
     }
 `;

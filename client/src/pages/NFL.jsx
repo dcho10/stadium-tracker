@@ -6,6 +6,7 @@ import { ADD_NFL_VISIT } from "../utils/mutations";
 import AuthService from "../utils/auth";
 
 import "./NFL.css"
+import NFLLogo from "../assets/nfl-logo.svg"
 
 export default function NFL() {
   const user = AuthService.getUser();
@@ -24,7 +25,6 @@ export default function NFL() {
   const [selectedStadium, setSelectedStadium] = useState(null);
   const [calendarVisible, setCalendarVisible] = useState(false);
   const [dateVisited, setDateVisited] = useState(null);
-  const [visitedCount, setVisitedCount] = useState(0);
 
   const [addNFLVisit] = useMutation(ADD_NFL_VISIT);
 
@@ -92,18 +92,19 @@ Object.keys(conferenceGroups).forEach((group) => {
 });
 
 return (
-  <section className="league-stadiums">
-    <h1> NFL </h1>
-    <h2> {firstName}, which stadiums have you recently visited? </h2>
+  <section className="nfl-stadiums">
+    <div className="logo-container">
+      <img src={NFLLogo} alt="NFL Logo" />
+    </div>
+    <h1> {firstName}, which stadiums have you recently visited? </h1>
 
-    {/* Rendering AFC Divisions */}
-    <section className="stadium-container">
-      <section className="stadium-row">
+    <section className="nfl-container">
+      <section className="nfl-row">
         {["AFC East", "AFC North", "AFC South", "AFC West"].map((division) => (
-          <section className="stadiums-list" key={division}>
-            <h3>{division}</h3>
+          <section className="nfl-list" key={division}>
+            <h2>{division}</h2>
             {conferenceGroups[division].map((stadium) => (
-              <section className="stadium-item" key={stadium._id}>
+              <section className="nfl-item" key={stadium._id}>
                 <button
                   type="button"
                   className={visitedStadiums[stadium._id] ? "visited" : "not-visited"}
@@ -118,14 +119,13 @@ return (
       </section>
     </section>
 
-    {/* Rendering NFC Divisions */}
-    <section className="stadium-container">
-      <section className="stadium-row">
+    <section className="nfl-container">
+      <section className="nfl-row">
         {["NFC East", "NFC North", "NFC South", "NFC West"].map((division) => (
-          <section className="stadiums-list" key={division}>
-            <h3>{division}</h3>
+          <section className="nfl-list" key={division}>
+            <h2>{division}</h2>
             {conferenceGroups[division].map((stadium) => (
-              <section className="stadium-item" key={stadium._id}>
+              <section className="nfl-item" key={stadium._id}>
                 <button
                   type="button"
                   className={visitedStadiums[stadium._id] ? "visited" : "not-visited"}

@@ -44,18 +44,18 @@ const resolvers = {
             if (lastName) updatedInfo.lastName = lastName;
             if (email) updatedInfo.email = email;
             if (password) updatedInfo.password = await bcrypt.hash(password, 10);
-
+            
             return User.findByIdAndUpdate(userId, updatedInfo, { new: true })
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
-
+            
             if (!user) {
                 throw new Error("Incorrect email or password, please try again.")
             }
-
+            
             const correctPass = await user.isCorrectPassword(password);
-
+            
             if (!correctPass) {
                 throw new Error("Incorrect email or password, please try again.")
             }
@@ -98,28 +98,6 @@ const resolvers = {
                 throw new Error('Failed to add MLB visit');
             }
         },
-        deleteMLBVisit: async (parent, { userId, stadiumId }) => {
-            try {
-              const updatedUser = await User.findByIdAndUpdate(
-                userId,
-                {
-                  $pull: {
-                    baseballStadiums: { stadiumId }
-                  }
-                },
-                { new: true }
-              );
-              
-              if (!updatedUser) {
-                throw new Error("User not found");
-              }
-          
-              return updatedUser;
-            } catch (error) {
-              console.error(error);
-              throw new Error("Failed to delete MLB visit");
-            }
-        },
         addNFLVisit: async (parent, { userId, stadiumId, dateVisited }) => {
             try {
                 const stadium = await NFLModel.findById(stadiumId);
@@ -127,7 +105,7 @@ const resolvers = {
                 if (!stadium) {
                     throw new Error('Stadium not found');
                 }
-        
+                
                 return await User.findByIdAndUpdate(
                     userId,
                     {
@@ -145,29 +123,7 @@ const resolvers = {
                 );
             } catch (error) {
                 console.error(error);
-                throw new Error('Failed to add MLB visit');
-            }
-        },
-        deleteNFLVisit: async (parent, { userId, stadiumId }) => {
-            try {
-              const updatedUser = await User.findByIdAndUpdate(
-                userId,
-                {
-                  $pull: {
-                    footballStadiums: { stadiumId }
-                  }
-                },
-                { new: true }
-              );
-              
-              if (!updatedUser) {
-                throw new Error("User not found");
-              }
-          
-              return updatedUser;
-            } catch (error) {
-              console.error(error);
-              throw new Error("Failed to delete MLB visit");
+                throw new Error('Failed to add NF: visit');
             }
         },
         addNBAVisit: async (parent, { userId, stadiumId, dateVisited }) => {
@@ -195,29 +151,7 @@ const resolvers = {
                 );
             } catch (error) {
                 console.error(error);
-                throw new Error('Failed to add MLB visit');
-            }
-        },
-        deleteNBAVisit: async (parent, { userId, stadiumId }) => {
-            try {
-              const updatedUser = await User.findByIdAndUpdate(
-                userId,
-                {
-                  $pull: {
-                    basketballStadiums: { stadiumId }
-                  }
-                },
-                { new: true }
-              );
-              
-              if (!updatedUser) {
-                throw new Error("User not found");
-              }
-          
-              return updatedUser;
-            } catch (error) {
-              console.error(error);
-              throw new Error("Failed to delete MLB visit");
+                throw new Error('Failed to add NBA visit');
             }
         },
         addNHLVisit: async (parent, { userId, stadiumId, dateVisited }) => {
@@ -245,7 +179,141 @@ const resolvers = {
                 );
             } catch (error) {
                 console.error(error);
-                throw new Error('Failed to add MLB visit');
+                throw new Error('Failed to add NHL visit');
+            }
+        },
+        editMLBVisit: async (parent, { userId, stadiumId, dateVisited }) => {
+            try {
+                const updateVisit = await User.findOneAndUpdate(
+                    { _id: userId, "baseballStadiums.stadiumId": stadiumId },
+                    {
+                        $set: {
+                            "baseballStadiums.$.dateVisited": dateVisited,
+                        },
+                    },
+                    { new: true, upsert: true }
+                );
+                return updateVisit;
+            } catch (error) {
+                console.error(error);
+                throw new Error("Failed to update MLB visit");
+            }
+        },
+        editNBAVisit: async (parent, { userId, stadiumId, dateVisited }) => {
+            try {
+                const updateVisit = await User.findOneAndUpdate(
+                    { _id: userId, "basketballStadiums.stadiumId": stadiumId },
+                    {
+                        $set: {
+                            "basketballStadiums.$.dateVisited": dateVisited,
+                        },
+                    },
+                    { new: true, upsert: true }
+                );
+                return updateVisit;
+            } catch (error) {
+                console.error(error);
+                throw new Error("Failed to update NBA visit");
+            }
+        },
+        editNFLVisit: async (parent, { userId, stadiumId, dateVisited }) => {
+            try {
+                const updateVisit = await User.findOneAndUpdate(
+                    { _id: userId, "footballStadiums.stadiumId": stadiumId },
+                    {
+                        $set: {
+                            "footballStadiums.$.dateVisited": dateVisited,
+                        },
+                    },
+                    { new: true, upsert: true }
+                );
+                return updateVisit;
+            } catch (error) {
+                console.error(error);
+                throw new Error("Failed to update NFL visit");
+            }
+        },
+        editNHLVisit: async (parent, { userId, stadiumId, dateVisited }) => {
+            try {
+                const updateVisit = await User.findOneAndUpdate(
+                    { _id: userId, "hockeyStadiums.stadiumId": stadiumId },
+                    {
+                        $set: {
+                            "hockeyStadiums.$.dateVisited": dateVisited,
+                        },
+                    },
+                    { new: true, upsert: true }
+                );
+                return updateVisit;
+            } catch (error) {
+                console.error(error);
+                throw new Error("Failed to update NHL visit");
+            }
+        },
+        deleteMLBVisit: async (parent, { userId, stadiumId }) => {
+            try {
+              const updatedUser = await User.findByIdAndUpdate(
+                userId,
+                {
+                  $pull: {
+                    baseballStadiums: { stadiumId }
+                  }
+                },
+                { new: true }
+              );
+              
+              if (!updatedUser) {
+                throw new Error("User not found");
+              }
+          
+              return updatedUser;
+            } catch (error) {
+              console.error(error);
+              throw new Error("Failed to delete MLB visit");
+            }
+        },
+        deleteNFLVisit: async (parent, { userId, stadiumId }) => {
+            try {
+              const updatedUser = await User.findByIdAndUpdate(
+                userId,
+                {
+                  $pull: {
+                    footballStadiums: { stadiumId }
+                  }
+                },
+                { new: true }
+              );
+              
+              if (!updatedUser) {
+                throw new Error("User not found");
+              }
+          
+              return updatedUser;
+            } catch (error) {
+              console.error(error);
+              throw new Error("Failed to delete MLB visit");
+            }
+        },
+        deleteNBAVisit: async (parent, { userId, stadiumId }) => {
+            try {
+              const updatedUser = await User.findByIdAndUpdate(
+                userId,
+                {
+                  $pull: {
+                    basketballStadiums: { stadiumId }
+                  }
+                },
+                { new: true }
+              );
+              
+              if (!updatedUser) {
+                throw new Error("User not found");
+              }
+          
+              return updatedUser;
+            } catch (error) {
+              console.error(error);
+              throw new Error("Failed to delete MLB visit");
             }
         },
         deleteNHLVisit: async (parent, { userId, stadiumId }) => {

@@ -1,0 +1,125 @@
+.profile-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik", sans-serif;
+    gap: 1rem;
+    width: 20%;
+}
+
+.profile-info img {
+    max-width: 75%;
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.profile-logo-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.profile-logo-container img {
+    max-width: 50%;
+    height: auto;
+}
+
+.visited-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 1rem;
+    align-items: start;
+}
+
+.visited-stadiums {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 1rem;
+    justify-items: center; 
+}
+
+.visited-stadiums h2 {
+    font-family: "Rubik", sans-serif;
+    color: var(--secondary);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.visited-stadiums p {
+    font-family: "DM Sans", system-ui;
+    color: var(--white);
+    text-align: center;
+}
+
+.visited-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.visited-list li {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+.visited-list button {
+    background-color: green;
+    color: var(--white);
+    padding: 0.75rem;
+    width: 100%; 
+    height: 3rem; 
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-visit {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+    font-family: "Rubik", sans-serif;
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.visit-actions {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.visit-actions button {
+    width: 20%;
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+}

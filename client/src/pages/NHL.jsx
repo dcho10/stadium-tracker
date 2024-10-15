@@ -6,6 +6,7 @@ import { ADD_NHL_VISIT } from "../utils/mutations";
 import AuthService from "../utils/auth";
 
 import "./NHL.css"
+import NHLLogo from "../assets/nhl-logo.svg"
 
 export default function NHL() {
   const user = AuthService.getUser();
@@ -23,7 +24,6 @@ export default function NHL() {
   const [selectedStadium, setSelectedStadium] = useState(null);
   const [calendarVisible, setCalendarVisible] = useState(false);
   const [dateVisited, setDateVisited] = useState(null);
-  const [visitedCount, setVisitedCount] = useState(0);
 
   const [addNHLVisit] = useMutation(ADD_NHL_VISIT);
 
@@ -93,14 +93,16 @@ export default function NHL() {
   return (
     <>
     <section className="nhl-stadiums">
-      <h1> NHL </h1>
-      <h2> {firstName}, which stadiums have you recently visited? </h2>
+    <div className="logo-container">
+      <img src={NHLLogo} alt="NHL Logo" />
+    </div>
+      <h1> {firstName}, which stadiums have you recently visited? </h1>
 
       <section className="nhl-container">
         <section className="nhl-row">
           {["Atlantic", "Metropolitan"].map((division) => (
             <section className="nhl-list" key={division}>
-              <h3>{division}</h3>
+              <h2>{division}</h2>
               {divisionGroups[division].map((stadium) => (
                 <section className="nhl-item" key={stadium._id}>
                   <button
@@ -121,7 +123,7 @@ export default function NHL() {
         <section className="nhl-row">
           {["Central", "Pacific"].map((division) => (
             <section className="nhl-list" key={division}>
-              <h3>{division}</h3>
+              <h2>{division}</h2>
               {divisionGroups[division].map((stadium) => (
                 <section className="nhl-item" key={stadium._id}>
                   <button

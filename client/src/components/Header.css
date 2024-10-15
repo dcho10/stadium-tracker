@@ -4,6 +4,7 @@
     align-items: center;
     font-family: "Rubik", sans-serif;
     background-color: var(--primary);
+    padding: 0 0.5rem;
 }
 
 h1 {
@@ -14,7 +15,6 @@ h1 {
 .header-links ul {
     display: flex;
     gap: 1rem;
-    padding: 1rem;
 }
 
 .header-links li {
@@ -29,12 +29,12 @@ h1 {
     color: var(--secondary);
 }
 
-.header-links a {
+.header-links a, .header-links button {
     color: var(--secondary);
     position: relative;
 }
 
-.header-links a::before {
+.header-links a::before, .header-links button::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -46,10 +46,18 @@ h1 {
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
-  }
+}
   
-.header-links a:hover::before {
+.header-links a:hover::before, .header-links button:hover::before {
     transform-origin: left;
     transform: scaleX(1);
-  }
+}
+
+.header-links button {
+    border: none;
+    background-color: var(--primary);
+    font-size: 1.25rem;
+    color: var(--secondary);
+    cursor: pointer;
+}
 

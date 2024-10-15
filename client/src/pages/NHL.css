@@ -1,18 +1,11 @@
 .nhl-stadiums h1 {
     font-family: "Rubik", sans-serif;
-    font-size: 4rem;
-    color: var(--secondary);
-    text-align: center;
-}
-
-.nhl-stadiums h2 {
-    font-family: "Rubik", sans-serif;
     font-size: 2rem;
     text-align: center;
     color: var(--white);
 }
 
-.nhl-stadiums h3 {
+.nhl-stadiums h2 {
     font-family: "Rubik", sans-serif;
     font-size: 1.5rem;
     text-align: center;
@@ -23,6 +16,16 @@
     justify-content: center;
     gap: 1rem;
     padding: 0 1rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.logo-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 .nhl-container {

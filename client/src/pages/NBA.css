@@ -1,18 +1,11 @@
 .nba-stadiums h1 {
     font-family: "Rubik", sans-serif;
-    font-size: 4rem;
-    color: var(--secondary);
-    text-align: center;
-}
-
-.nba-stadiums h2 {
-    font-family: "Rubik", sans-serif;
     font-size: 2rem;
     text-align: center;
     color: var(--white);
 }
 
-.nba-stadiums h3 {
+.nba-stadiums h2 {
     font-family: "Rubik", sans-serif;
     font-size: 1.5rem;
     text-align: center;
@@ -23,6 +16,16 @@
     justify-content: center;
     gap: 1rem;
     padding: 0 1rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.logo-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 .nba-container {
@@ -171,7 +174,7 @@
     cursor: pointer;
   }
   
-  .calendar-overlay {
+.calendar-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -179,5 +182,6 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     z-index: 9;
-  }
+}
+
   

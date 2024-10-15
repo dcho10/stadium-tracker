@@ -6,6 +6,7 @@ import { ADD_MLB_VISIT } from "../utils/mutations";
 import AuthService from "../utils/auth";
 
 import "./MLB.css"
+import MLBLogo from "../assets/mlb-logo.svg"
 
 export default function MLB() {
   const user = AuthService.getUser();
@@ -23,7 +24,6 @@ export default function MLB() {
   const [selectedStadium, setSelectedStadium] = useState(null);
   const [calendarVisible, setCalendarVisible] = useState(false);
   const [dateVisited, setDateVisited] = useState(null);
-  const [visitedCount, setVisitedCount] = useState(0);
 
   const [addMLBVisit] = useMutation(ADD_MLB_VISIT);
 
@@ -89,14 +89,16 @@ export default function MLB() {
   return (
     <>
     <section className="mlb-stadiums">
-      <h1> MLB </h1>
-      <h2> {firstName}, which stadiums have you recently visited? </h2>
+      <div className="logo-container">
+        <img src={MLBLogo} alt="MLB Logo" />
+      </div>
+      <h1> {firstName}, which stadiums have you recently visited? </h1>
 
       <section className="mlb-container">
         <section className="mlb-row">
           {["AL East", "AL Central", "AL West"].map((division) => (
             <section className="mlb-list" key={division}>
-              <h3>{division}</h3>
+              <h2>{division}</h2>
               {divisionGroups[division].map((stadium) => (
                 <section className="mlb-item" key={stadium._id}>
                   <button
@@ -117,7 +119,7 @@ export default function MLB() {
         <section className="mlb-row">
           {["NL East", "NL Central", "NL West"].map((division) => (
             <section className="mlb-list" key={division}>
-              <h3>{division}</h3>
+              <h2>{division}</h2>
               {divisionGroups[division].map((stadium) => (
                 <section className="mlb-item" key={stadium._id}>
                   <button
@@ -136,11 +138,11 @@ export default function MLB() {
       
       {calendarVisible && (
         <>
-          <div className="calendar-overlay" onClick={() => setCalendarVisible(false)}></div>
-          <div className="calendar-popup">
+          <section className="calendar-overlay" onClick={() => setCalendarVisible(false)}></section>
+          <section className="calendar-popup">
             <h4> Which day did you visit {selectedStadium.stadiumName}? </h4>
             <Calendar onChange={handleSubmitDate} value={dateVisited} maxDate={new Date()} />
-          </div>
+          </section>
 
         </>
       )}

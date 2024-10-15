@@ -6,6 +6,7 @@ import { ADD_NBA_VISIT } from "../utils/mutations";
 import AuthService from "../utils/auth";
 
 import "./NBA.css"
+import NBALogo from "../assets/nba-logo.svg"
 
 export default function NBA() {
   const user = AuthService.getUser();
@@ -23,7 +24,6 @@ export default function NBA() {
   const [selectedStadium, setSelectedStadium] = useState(null);
   const [calendarVisible, setCalendarVisible] = useState(false);
   const [dateVisited, setDateVisited] = useState(null);
-  const [visitedCount, setVisitedCount] = useState(0);
 
   const [addNBAVisit] = useMutation(ADD_NBA_VISIT);
 
@@ -91,14 +91,16 @@ export default function NBA() {
   return (
     <>
     <section className="nba-stadiums">
-      <h1> NBA </h1>
-      <h2> {firstName}, which stadiums have you recently visited? </h2>
+      <div className="logo-container">
+        <img src={NBALogo} alt="NBA Logo" />
+      </div>
+      <h1> {firstName}, which stadiums have you recently visited? </h1>
 
       <section className="nba-container">
         <section className="nba-row">
           {["Atlantic", "Central", "Southeast"].map((division) => (
             <section className="nba-list" key={division}>
-              <h3>{division}</h3>
+              <h2>{division}</h2>
               {divisionGroups[division].map((stadium) => (
                 <section className="nba-item" key={stadium._id}>
                   <button
@@ -117,9 +119,9 @@ export default function NBA() {
 
       <section className="nba-container">
         <section className="nba-row">
-          {["Northwest", "Pacific", "Southwest"].map((division) => (
+          {["Northwest", "Southwest", "Pacific"].map((division) => (
             <section className="nba-list" key={division}>
-              <h3>{division}</h3>
+              <h2>{division}</h2>
               {divisionGroups[division].map((stadium) => (
                 <section className="nba-item" key={stadium._id}>
                   <button
