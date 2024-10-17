@@ -48,14 +48,12 @@ export default function Login() {
     return (
         <form onSubmit={handleFormSubmit} className="login-form" >
         <h1> Login </h1>
-        <section>
-            <h2> Email </h2>
+        <label>
             <input type="email" placeholder="Email" name="email" value={formState.email} onChange={handleChange}></input>
-        </section>
-        <section>
-            <h2> Password </h2>
+        </label>
+        <label>
             <input type="password" placeholder="Password" name="password" value={formState.password} onChange={handleChange}></input>
-        </section>
+        </label>
         <section className="account-btns">
             <button type="submit"> Login </button>
         </section>

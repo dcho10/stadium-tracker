@@ -1,14 +1,9 @@
-.welcome h1 {
-    font-size: 4rem;
-    font-family: "Rubik", sans-serif;
-    color: var(--secondary);
-}
-
 .welcome {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 90vh;
 }
 
 .login-signup {
@@ -18,11 +13,39 @@
     gap: 2rem;
 }
 
+/* inspiration from: https://www.sliderrevolution.com/resources/css-button-hover-effects/ (Custom Icon CSS Button Hover) */
+
 .login-signup button {
-    width: 7.5rem;
+    width: 9rem;
     background-color: var(--white);
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     padding: 0.5rem;
+    font-weight: bold;
+    border: none;
+    transition: all 0.5s;
+    box-shadow: 0 0.75rem 1.25rem -0.5rem rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.login-signup button:after {
+    content: "»";
+    position: absolute;
+    top: 1rem;
+    opacity: 0;
+    right: -1.5rem;
+    transition: 0.5s;
+}
+
+.login-signup button:hover {
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.login-signup button:hover:after {
+    opacity: 1;
+    right: 1rem;
 }
 
 .login-signup button a {
@@ -30,4 +53,52 @@
     font-size: 1.5rem;
     background-color: var(--white);
     color: var(--black);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    font-family: "Rubik", sans-serif;
+    border-radius: 0.25rem;
+    padding: 3.5rem;
+    box-shadow: 0 0.75rem 1.25rem -0.5rem rgba(0, 0, 0, 0.7);
+    width: 25rem;
+}
+
+.scoreboard span {
+    font-size: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.score {
+    font-size: 3rem;
+    background: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 6rem;
+    border-radius: 0.25rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Adjusted to make the animation slower */
+    opacity: 1;
+}
+
+.score.animated {
+    transform: scale(1.2); /* Scaling effect to highlight the score change */
+    opacity: 1; /* Ensure the score remains visible */
 }

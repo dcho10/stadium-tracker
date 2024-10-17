@@ -1,65 +1,100 @@
-.signup-form, .login-form {
-    display: grid;
-    justify-content: center;
-    gap: 1rem;
-    padding: 3rem;
-    background-color: var(--white);
-    margin: auto;
-    width: 30rem;
-    border-radius: 0.5rem;
+/* Login and signup css used from: https://codepen.io/swapnet/pen/QWwPVwE */
+
+.signup-form, .login-form, .signup-form p .login-form p, .signup-form input, .login-form input, .signup-form select, .login-form select, .signup-form button, .login-form button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: 1rem;
+}
+
+.signup-form, .login-form .signup-form p, .login-form p {
+    color: var(--black);
+    text-shadow: 1px 1px 1px var(--white);
 }
 
 .signup-form h1, .login-form h1 {
-    font-size: 3.75rem;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
     font-family: "Rubik", sans-serif;
-    color: var(--black);
-    margin: auto;
 }
 
-.signup-form h2, .login-form h2 {
-    font-size: 1.25rem;
-    font-family: "Rubik", sans-serif;
-    color: var(--secondary);
+.signup-form, .login-form {
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: var(--gray);
+    padding: 2rem;
+    width: 30rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.75rem 1.25rem -0.5rem rgba(0, 0, 0, 0.7);
 }
 
-.signup-form p {
-    font-family: "DM Sans", system-ui;
-    opacity: 0.75;
+.signup-form button, .login-form button, .signup-form input, .login-form input {
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--gray);
+    text-shadow: 1px 1px 0 var(--white);
+    transition: all 0.2s ease-in-out;
+}
+
+.signup-form label, .login-form label {
+    display: block;
+    margin-bottom: calc(1rem * 1.5);
+    width: 100%;
 }
 
 .signup-form input, .login-form input {
-    width: 20rem;
-    height: 2rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    margin: 0.5rem 0 0 0;
+    margin-right: calc(1rem / 2);
+    box-shadow: inset 2px 2px 5px var(--black), inset -5px -5px 10px var(--white);
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+}
+
+.signup-form input:focus, .login-form input:focus {
+    box-shadow: inset 1px 1px 2px var(--black), inset -1px -1px 2px var(--white);
+}
+
+.signup-form button, .login-form button {
+    color: #61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px var(--white), 5px 5px 20px var(--black);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.signup-form button:hover, .login-form button:hover {
+    box-shadow: -2px -2px 5px var(--white), 2px 2px 5px var(--black);
+}
+
+.signup-form button:active, .login-form button:active {
+    box-shadow: inset 1px 1px 2px var(--black), inset -1px -1px 2px var(--white);
 }
 
 .account-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .account-btns button {
-    font-size: 1rem;
-    padding: 0.25rem;
-    margin: auto;
-    width: 5rem;
-    border-radius: 0.5rem;
-    background-color: var(--black);
-    color: var(--white);
-}
-
-.account-btns button:hover {
-    cursor: pointer;
-}
-
-.account-btns a {
-    color: var(--white);
+    color: var(--secondary);
+    font-weight: bold;
+    width: 100%;
+    background-color: var(--gray);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-shadow: 1px 1px 0 var(--white);
+    box-shadow: -5px -5px 20px var(--white), 5px 5px 20px var(--black);
+    transition: all 0.2s ease-in-out;
 }
 
 .form-error {
-    font-family: "DM Sans", system-ui;
-    opacity: 0.75;
+    color: var(--secondary);
+    font-size: 1rem;
     text-align: center;
+    margin-top: 1rem;
 }

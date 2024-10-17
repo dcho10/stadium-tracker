@@ -45,25 +45,21 @@ export default function Signup() {
         <>
             <form onSubmit={handleFormSubmit}className="signup-form">
                 <h1> Sign Up </h1>
-                <section>
-                    <h2> First Name* </h2>
-                    <input type="text" placeholder="First Name" name="firstName" value={formState.firstName} onChange={handleChange}></input>
-                </section>
-                <section>
-                    <h2> Last Name </h2>
-                    <input type="text" placeholder="Last Name" name="lastName" value={formState.lastName} onChange={handleChange}></input>
-                </section>
-                <section>
-                    <h2> Email* </h2>
-                    <input type="text" placeholder="Email" name="email" value={formState.email} onChange={handleChange}></input>
-                </section>
-                <section>
-                    <h2> Password* </h2>
-                    <input type="password" placeholder="Password" name="password" value={formState.password} onChange={handleChange}></input>
-                </section>
+                <label>
+                    <input type="text" placeholder="First Name*" name="firstName" value={formState.firstName} onChange={handleChange}></input>
+                </label>
+                <label>
+                    <input type="text" placeholder="Last Name*" name="lastName" value={formState.lastName} onChange={handleChange}></input>
+                </label>
+                <label>
+                    <input type="text" placeholder="Email*" name="email" value={formState.email} onChange={handleChange}></input>
+                </label>
+                <label>
+                    <input type="password" placeholder="Password*" name="password" value={formState.password} onChange={handleChange}></input>
+                </label>
                 <p> *Required </p>
                 <section className="account-btns">
-                    <button type="submit"> Sign Up</button>
+                <button type="submit" className="btn-white btn-animate"> SIGN UP </button>
                 </section>
                 {error && (
                 <section className="form-error">
