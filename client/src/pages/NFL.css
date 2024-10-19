@@ -31,13 +31,21 @@
 .nfl-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
     font-family: "DM Sans", system-ui;
     text-align: center;
     gap: 1.25rem;
 }
 
+.nfl-item {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-template-columns: subgrid;
+}
+
 .button {
     width: 100%;
+    height: 100%;
     color: var(--white);
     cursor: pointer;
     padding: 0.75rem;
@@ -47,6 +55,26 @@
     position: relative;
     overflow: hidden;
     text-wrap: wrap;
+    align-items: center;
+    border: 0;
+    box-shadow: 
+        rgba(45, 35, 66, .4) 0 2px 4px,
+        rgba(45, 35, 66, .3) 0 7px 13px -3px,
+        rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+}
+
+.button:focus {
+    box-shadow: darkgreen 0 0 0 1.5px inset, 
+    rgba(45, 35, 66, .4) 0 2px 4px, 
+    rgba(45, 35, 66, .3) 0 7px 13px -3px, 
+    darkgreen 0 -3px 0 inset;
 }
 
 .button.button-effect {
@@ -54,9 +82,6 @@
 }
 
 .button.button-effect::before {
-    content: "\f067";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -72,13 +97,15 @@
 
 .button.button-effect:hover {
     width: 100%;
-    text-indent: -9999px
+    text-indent: -9999px;
+    transform: translateY(-2px);
 }
 
 .button.button-effect:hover::before {
     top: 0;
     text-indent: 0;
     width: 100%;
+    transform: translateY(-2px);
 }
 
 .button.button-effect.not-visited::before {

@@ -167,6 +167,7 @@ export default function Profile() {
                 <button
                   type="button"
                   onClick={() => handleViewVisit(stadium)}
+                  className="button button-effect"
                 >
                   {stadium.stadiumName} - {stadium.teamName}
                 </button>
