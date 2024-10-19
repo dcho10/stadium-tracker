@@ -28,10 +28,12 @@ export default function Welcome() {
             <h1> Welcome, {firstName}!</h1>
             <p> Which league would you like to visit? </p>
             <section className="league-links">
-                <a href="/nfl"><img src={NFLLogo} alt="NFL Logo"/></a>
-                <a href="/nba"><img src={NBALogo} alt="NBA Logo"/></a>
-                <a href="/mlb"><img src={MLBLogo} alt="MLB Logo"/></a>
-                <a href="/nhl"><img src={NHLLogo} alt="NHL Logo"/></a>
+                <ul>
+                    <li><a href="/nfl"><img src={NFLLogo} alt="NFL Logo"/></a></li>
+                    <li><a href="/nba"><img src={NBALogo} alt="NBA Logo"/></a></li>
+                    <li><a href="/mlb"><img src={MLBLogo} alt="MLB Logo"/></a></li>
+                    <li><a href="/nhl"><img src={NHLLogo} alt="NHL Logo"/></a></li>
+                </ul>
             </section>
         </section>
         </>

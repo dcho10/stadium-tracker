@@ -36,12 +36,61 @@
     gap: 1.25rem;
 }
 
-.nfl-container button {
+.button {
     width: 100%;
     color: var(--white);
     cursor: pointer;
     padding: 0.75rem;
     border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-wrap: wrap;
+}
+
+.button.button-effect {
+    transition: all 0.2s linear;
+}
+
+.button.button-effect::before {
+    content: "\f067";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    transition: all 0.2s linear;
+}
+
+.button.button-effect:hover {
+    width: 100%;
+    text-indent: -9999px
+}
+
+.button.button-effect:hover::before {
+    top: 0;
+    text-indent: 0;
+    width: 100%;
+}
+
+.button.button-effect.not-visited::before {
+    content: "\f067";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; 
+}
+
+.button.button-effect.visited::before {
+    content: "\f06e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; 
 }
 
 .nfl-row {
@@ -172,9 +221,9 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
   
-  .calendar-overlay {
+.calendar-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -182,5 +231,8 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     z-index: 9;
-  }
+}
   
+.view-visit p {
+    text-align: center;
+}

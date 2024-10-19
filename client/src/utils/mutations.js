@@ -85,7 +85,7 @@ export const ADD_NHL_VISIT = gql `
             _id
             firstName
             lastName
-            basketballStadiums {
+            hockeyStadiums {
                 _id
                 stadiumName
                 teamName

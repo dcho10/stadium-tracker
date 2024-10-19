@@ -55,7 +55,7 @@ export default function Login() {
             <input type="password" placeholder="Password" name="password" value={formState.password} onChange={handleChange}></input>
         </label>
         <section className="account-btns">
-            <button type="submit"> Login </button>
+            <button type="submit"> LOGIN </button>
         </section>
         {error && (
                 <section className="form-error">

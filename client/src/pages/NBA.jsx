@@ -24,6 +24,9 @@ export default function NBA() {
   const [selectedStadium, setSelectedStadium] = useState(null);
   const [calendarVisible, setCalendarVisible] = useState(false);
   const [dateVisited, setDateVisited] = useState(null);
+  const [viewVisit, setViewVisit] = useState(false);
+  const [selectedVisit, setSelectedVisit] = useState(false);
+
 
   const [addNBAVisit] = useMutation(ADD_NBA_VISIT);
 
@@ -40,10 +43,19 @@ export default function NBA() {
   }, [userData]);
   
   const handleStadiumChange = (stadium) => {
-    if (visitedStadiums[stadium._id]) return;
+    if (visitedStadiums[stadium._id]) {
+      const visit = userData.user.basketballStadiums.find(
+        (s) => s.stadiumId === stadium._id && s.hasVisited
+      );
+      if (visit) {
+        setSelectedVisit(visit);
+        setViewVisit(true); 
+      }
+      return;
+    }
     setSelectedStadium(stadium);
     setCalendarVisible(true);
-  }
+  };
 
   const handleSubmitDate = async (date) => {
     const today = new Date();
@@ -105,7 +117,7 @@ export default function NBA() {
                 <section className="nba-item" key={stadium._id}>
                   <button
                     type="button"
-                    className={visitedStadiums[stadium._id] ? "visited" : "not-visited"}
+                    className={`button button-effect ${visitedStadiums[stadium._id] ? "visited" : "not-visited"}`}
                     onClick={() => handleStadiumChange(stadium)}
                   >
                     {stadium.stadiumName} - {stadium.teamName}
@@ -126,7 +138,7 @@ export default function NBA() {
                 <section className="nba-item" key={stadium._id}>
                   <button
                     type="button"
-                    className={visitedStadiums[stadium._id] ? "visited" : "not-visited"}
+                    className={`button button-effect ${visitedStadiums[stadium._id] ? "visited" : "not-visited"}`}
                     onClick={() => handleStadiumChange(stadium)}
                   >
                     {stadium.stadiumName} - {stadium.teamName}
@@ -146,6 +158,20 @@ export default function NBA() {
             <Calendar onChange={handleSubmitDate} value={dateVisited} maxDate={new Date()} />
           </div>
 
+        </>
+      )}
+
+      {viewVisit && (
+        <>
+        <section className="calendar-overlay" onClick={() => setViewVisit(false)}></section>
+            <section className="view-visit">
+              <h2>
+                You visited {selectedVisit.stadiumName} on{" "}
+                {new Date(parseInt(selectedVisit.dateVisited)).toLocaleDateString('en-US', { 
+                  month: 'long', day: 'numeric', year: 'numeric' })}
+              </h2>
+              <p> To edit or delete, please go to your profile </p>
+            </section>
         </>
       )}
     </section>

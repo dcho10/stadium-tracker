@@ -37,6 +37,7 @@
     background-color: var(--gray);
     text-shadow: 1px 1px 0 var(--white);
     transition: all 0.2s ease-in-out;
+    font-family: "DM Sans", system-ui;
 }
 
 .signup-form label, .login-form label {
