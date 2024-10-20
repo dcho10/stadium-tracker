@@ -30,18 +30,18 @@ Some challenges I experienced throughout development include:
 
 ## Images 
 
-Home Page: ![home page](image.png)
-Sign Up: ![sign up](image-1.png)
-Login: ![log in](image-2.png)
-Welcome: ![welcome](image-3.png)
-Sample League Page (NFL): ![nfl page](image-4.png)
-Profile Page: ![profile](image-5.png)
+### Home Page: ![home page](image.png)
+### Sign Up: ![sign up](image-1.png)
+### Login: ![log in](image-2.png)
+### Welcome: ![welcome](image-3.png)
+### Sample League Page (NFL): ![nfl page](image-4.png)
+### Profile Page: ![profile](image-5.png)
 
 ## Installation 
 
 The following installations were used:
 
-## Back-end:
+### Back-end:
 ```
     "dependencies": {
         "@apollo/server": "^4.7.1",
@@ -56,9 +56,9 @@ The following installations were used:
     "devDependencies": {
         "nodemon": "^2.0.3"
     }
+```
 
-
-## Front-end:
+### Front-end:
 ```
   "dependencies": {
     "@apollo/client": "^3.7.14",
@@ -81,6 +81,7 @@ The following installations were used:
     "globals": "^15.9.0",
     "vite": "^5.4.1"
   }
+```
 
 ## Credits
 
