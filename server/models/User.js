@@ -1,5 +1,5 @@
 const { Schema, Types, model } = require("mongoose");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 // Create User schema which rakes values of first name, last name, email, password, all the stadiums that they have visited referred by the id of each stadium model, and the dates which they have visited those stadiums
 // Included regex to verify validity of email

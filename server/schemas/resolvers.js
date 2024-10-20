@@ -1,5 +1,5 @@
 const { User, MLBModel, NBAModel, NFLModel, NHLModel } = require("../models")
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { signToken } = require("../utils/auth");
 
 // Set up resolvers queries and mutations
