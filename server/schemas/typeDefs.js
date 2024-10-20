@@ -1,3 +1,5 @@
+// set up typeDefs queries and mutations
+// Stadium is the base query which each league inherits/implements their values from
 const typeDefs = `
     type User {
         _id: ID

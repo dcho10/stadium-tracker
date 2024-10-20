@@ -1,6 +1,8 @@
+// Set up import
 import decode from "jwt-decode";
 
 class AuthService {
+    // Get the user's token, and check to see if token exists and is expired
     getUser() {
         const token = this.getToken();
         if (token && !this.isTokenExpired(token)) {

@@ -1,5 +1,7 @@
+// Set up import
 import { gql } from "@apollo/client";
 
+// Add user front-end mutation
 export const ADD_USER = gql `
     mutation addUser($firstName: String!, $lastName: String!, $email: String!, $password: String!) {
         addUser(firstName: $firstName, lastName: $lastName, email: $email, password: $password)
@@ -15,6 +17,7 @@ export const ADD_USER = gql `
     }
 `;
 
+// Login front-end mutation
 export const LOGIN = gql`
     mutation login($email: String!, $password: String!) {
         login(email: $email, password: $password) {
@@ -28,6 +31,7 @@ export const LOGIN = gql`
     }
 `
 
+// Add MLB visit front-end mutation
 export const ADD_MLB_VISIT = gql`
     mutation addMLBVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
         addMLBVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
@@ -45,6 +49,7 @@ export const ADD_MLB_VISIT = gql`
     }
 `
 
+// Add NBA visit front-end mutation
 export const ADD_NBA_VISIT = gql `
     mutation addNBAVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
         addNBAVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
@@ -62,6 +67,7 @@ export const ADD_NBA_VISIT = gql `
     }
 `
 
+// Add NFL visit front-end mutation
 export const ADD_NFL_VISIT = gql `
     mutation addNFLVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
         addNFLVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
@@ -79,6 +85,7 @@ export const ADD_NFL_VISIT = gql `
     }
 `
 
+// Add NHL visit front-end mutation
 export const ADD_NHL_VISIT = gql `
     mutation addNHLVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
         addNHLVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
@@ -96,6 +103,7 @@ export const ADD_NHL_VISIT = gql `
     }
 `
 
+// Edit MLB visit front-end mutation
 export const EDIT_MLB_VISIT = gql `
     mutation editMLBVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
         editMLBVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
@@ -112,6 +120,7 @@ export const EDIT_MLB_VISIT = gql `
         }
     }
 `
+// Edit NBA visit front-end mutation
 export const EDIT_NBA_VISIT = gql `
     mutation editNBAVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
         editNBAVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
@@ -129,6 +138,7 @@ export const EDIT_NBA_VISIT = gql `
     }  
 `
 
+// Edit NFL visit front-end mutation
 export const EDIT_NFL_VISIT = gql `
     mutation editNFLVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
         editNFLVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
@@ -143,7 +153,7 @@ export const EDIT_NFL_VISIT = gql `
         }
     }
 `
-
+// Edit NHL visit front-end mutation
 export const EDIT_NHL_VISIT = gql `
     mutation editNHLVisit($userId: ID!, $stadiumId: ID!, $dateVisited: String!) {
         editNHLVisit(userId: $userId, stadiumId: $stadiumId, dateVisited: $dateVisited) {
@@ -160,6 +170,7 @@ export const EDIT_NHL_VISIT = gql `
         }
     }
 `
+// Delete MLB visit front-end mutation
 export const DELETE_MLB_VISIT = gql `
     mutation deleteMLBVisit($userId: ID!, $stadiumId: ID!) {
         deleteMLBVisit(userId: $userId, stadiumId: $stadiumId) {
@@ -177,6 +188,7 @@ export const DELETE_MLB_VISIT = gql `
     }
 `
 
+// Delete NBA visit front-end mutation
 export const DELETE_NBA_VISIT = gql `
     mutation deleteNBAVisit($userId: ID!, $stadiumId: ID!) {
         deleteNBAVisit(userId: $userId, stadiumId: $stadiumId) {
@@ -194,6 +206,7 @@ export const DELETE_NBA_VISIT = gql `
     }
 `
 
+// Delete NHL visit front-end mutation
 export const DELETE_NHL_VISIT = gql `
     mutation deleteNHLVisit($userId: ID!, $stadiumId: ID!) {
         deleteNHLVisit(userId: $userId, stadiumId: $stadiumId) {
@@ -211,7 +224,7 @@ export const DELETE_NHL_VISIT = gql `
     }
 `
 
-
+// Delete NFL visit front-end mutation
 export const DELETE_NFL_VISIT = gql `
     mutation deleteNFLVisit($userId: ID!, $stadiumId: ID!) {
         deleteNFLVisit(userId: $userId, stadiumId: $stadiumId) {

@@ -1,6 +1,8 @@
 const { Schema, Types, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
+// Create User schema which rakes values of first name, last name, email, password, all the stadiums that they have visited referred by the id of each stadium model, and the dates which they have visited those stadiums
+// Included regex to verify validity of email
 const userSchema = new Schema({
     firstName: {
         type: String,
@@ -17,13 +19,14 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        match: [/.+@.+\..+/, 'Must match an email address!'],
+        match: [/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, 'Must match an email address!'],
     },
     password: {
         type: String,
         required: true,
         minLength: 12,
     },
+    // Show all visited stadiums with stadiumId as a reference to each respective league's stadium ID
     baseballStadiums: [
         {
             stadiumId: {
@@ -122,6 +125,7 @@ const userSchema = new Schema({
     ],
 })
 
+// Save the password that the user creates and hash it using bcrypt
 userSchema.pre("save", async function (next) {
     if (this.isNew || this.isModified("password")) {
         const saltRounds = 10;
@@ -130,10 +134,12 @@ userSchema.pre("save", async function (next) {
     next ();
 })
 
+// Compares the password inputted with the password in the database to ensure the user is entering the correct password
 userSchema.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password);
 };
 
+// Create User model and export
 const User = model('User', userSchema);
 
 module.exports = User;

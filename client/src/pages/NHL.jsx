@@ -1,3 +1,4 @@
+// Set up imports
 import { useQuery, useMutation } from "@apollo/client";
 import { useEffect, useState } from "react";
 import Calendar from "react-calendar";
@@ -9,18 +10,22 @@ import "./NHL.css"
 import NHLLogo from "../assets/nhl-logo.svg"
 
 export default function NHL() {
+  // Fetch user data and create ID and firstName values                                                   
   const user = AuthService.getUser();
   const userId = user.data._id;
   const firstName = user.data.firstName
   
+  // User query to fetch user info based on the user ID
   const { loading: loadingUser, error: errorUser, data: userData } = useQuery(QUERY_USER, {
     variables: { userId },
   })
 
+  // NBA data query to fetch all NHL stadiums
   const { loading: loadingNHL, error: errorNHL, data: nhlData } = useQuery(QUERY_NHL)
   console.log(nhlData)
   const stadiums = nhlData?.nhlStadiums || [];
 
+  // Set up initial states
   const [visitedStadiums, setVisitedStadiums] = useState({});
   const [selectedStadium, setSelectedStadium] = useState(null);
   const [calendarVisible, setCalendarVisible] = useState(false);
@@ -28,8 +33,10 @@ export default function NHL() {
   const [viewVisit, setViewVisit] = useState(false);
   const [selectedVisit, setSelectedVisit] = useState(false);
 
+  // Add NHL visit mutation
   const [addNHLVisit] = useMutation(ADD_NHL_VISIT);
 
+  // Update state based on whether a stadium has been visited or not
   useEffect(() => {
     if (userData?.user?.hockeyStadiums) {
       const visited = {};
@@ -42,6 +49,7 @@ export default function NHL() {
     }
   }, [userData]);
   
+  // If a user has visited a stadium, the user will be able to view the date they inputted, otherwise asked to enter a date for a stadium they want to add
   const handleStadiumChange = (stadium) => {
     if (visitedStadiums[stadium._id]) {
       const visit = userData.user.hockeyStadiums.find(
@@ -57,6 +65,7 @@ export default function NHL() {
     setCalendarVisible(true);
   };
   
+  // When the user selects a date, they cannot select any days greater than the current day (i.e. can't pick future dates), the date they selected will be inputted into the database an the calendar will close
   const handleSubmitDate = async (date) => {
     const today = new Date();
     if (date > today) {
@@ -65,6 +74,7 @@ export default function NHL() {
     setDateVisited(date);
     setCalendarVisible(false);
 
+    // Variables requried for adding NHL visit
     try {
       await addNHLVisit({
         variables: {
@@ -78,6 +88,7 @@ export default function NHL() {
     }
   }
 
+  // Created groups based on the division the team is in
   const divisionGroups = {
     "Atlantic": [],
     "Metropolitan": [],
@@ -85,6 +96,7 @@ export default function NHL() {
     "Pacific": [],
   };
 
+  // Add the stadium to the corresponding division array
   stadiums.forEach((stadium) => {
     const { division } = stadium;
     if (divisionGroups[division]) {
@@ -92,6 +104,7 @@ export default function NHL() {
     }
   });
 
+  // Sort the stadiums in alphabetical order for each division
   Object.keys(divisionGroups).forEach((division) => {
     divisionGroups[division].sort((a, b) => a.stadiumName.localeCompare(b.stadiumName));
   });
@@ -106,11 +119,14 @@ export default function NHL() {
 
       <section className="nhl-container">
         <section className="nhl-row">
+          {/* Map all Eastern Conference divisions */}
           {["Atlantic", "Metropolitan"].map((division) => (
             <section className="nhl-list" key={division}>
               <h2>{division}</h2>
+              {/* Map all stadiums in that division in alphabetical order */}
               {divisionGroups[division].map((stadium) => (
                 <section className="nhl-item" key={stadium._id}>
+                  {/* Visited state conditional rendering */}
                   <button
                     type="button"
                     className={`button button-effect ${visitedStadiums[stadium._id] ? "visited" : "not-visited"}`}
@@ -127,11 +143,14 @@ export default function NHL() {
 
       <section className="nhl-container">
         <section className="nhl-row">
+          {/* Map all Western Conference divisions */}
           {["Central", "Pacific"].map((division) => (
             <section className="nhl-list" key={division}>
               <h2>{division}</h2>
+              {/* Map all statiums in that division in alphabetical order */}
               {divisionGroups[division].map((stadium) => (
                 <section className="nhl-item" key={stadium._id}>
+                  {/* Visited state conditional rendering */}
                   <button
                     type="button"
                     className={`button button-effect ${visitedStadiums[stadium._id] ? "visited" : "not-visited"}`}
@@ -146,6 +165,7 @@ export default function NHL() {
         </section>
       </section>
       
+      {/* React Calendar */}
       {calendarVisible && (
         <>
           <section className="calendar-overlay" onClick={() => setCalendarVisible(false)}></section>
@@ -157,6 +177,7 @@ export default function NHL() {
         </>
       )}
 
+      {/* View a visit */}
       {viewVisit && (
         <>
         <section className="calendar-overlay" onClick={() => setViewVisit(false)}></section>

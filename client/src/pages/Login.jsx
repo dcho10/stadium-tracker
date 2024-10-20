@@ -1,3 +1,4 @@
+// Set up imports
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
@@ -7,11 +8,15 @@ import Auth from "../utils/auth";
 import "./Signup.css";
 
 export default function Login() {
+    // Set up initial form state
     const [formState, setFormState ] = useState({
         email: "",
         password: ""
     });
+
+    // Login mutation
     const [login, {error, data }] = useMutation(LOGIN);
+
     const navigate = useNavigate();
 
     const handleChange = (event) => {
@@ -22,9 +27,9 @@ export default function Login() {
         });
     };
 
+    // Login logic - fetch the token after the user has logged in, and re-direct user to welcome page
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log("formState:", formState);
 
         try {
             const { data } = await login({
@@ -33,7 +38,6 @@ export default function Login() {
 
             Auth.login(data.login.token);
 
-            console.log("Successful login:", data)
             navigate("/welcome");
         } catch (err) {
             console.error(err);
@@ -57,10 +61,12 @@ export default function Login() {
         <section className="account-btns">
             <button type="submit"> LOGIN </button>
         </section>
+
+        {/* Conditional error message */}
         {error && (
-                <section className="form-error">
-                  {error.message}
-                </section>
+            <section className="form-error">
+                {error.message}
+            </section>
         )}
     </form>
     )

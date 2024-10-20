@@ -256,3 +256,9 @@
 .view-visit p {
     text-align: center;
 }
+
+@media (max-width: 590px) {
+    .nhl-container {
+        grid-template-columns: 1fr; 
+    }
+}

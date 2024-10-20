@@ -1,3 +1,4 @@
+// Set up imports
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
@@ -7,13 +8,17 @@ import Auth from "../utils/auth";
 import "./Signup.css"
 
 export default function Signup() {
+    // Set up initial form state
     const [formState, setFormState] = useState({
         firstName: "",
         lastName: "",
         email: "",
         password: "",
     });
+
+    // Create user mutation 
     const [addUser, { error }] = useMutation(ADD_USER);
+
     const navigate = useNavigate();
 
     const handleChange = (event) => {
@@ -24,6 +29,7 @@ export default function Signup() {
         })
     }
 
+    // Sign up logic - add the user based on the values inputted, create a token with their information, and re-direct user to the welcome page after creation
     const handleFormSubmit = async (event) => {
         event.preventDefault();
 
@@ -61,6 +67,8 @@ export default function Signup() {
                 <section className="account-btns">
                 <button type="submit" className="btn-white btn-animate"> SIGN UP </button>
                 </section>
+
+                {/* Conditional error message */}
                 {error && (
                 <section className="form-error">
                   {error.message}

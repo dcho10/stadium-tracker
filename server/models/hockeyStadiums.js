@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
-
 const stadiumBaseSchema = require("./stadiumBase");
 
+// Set up NHL schema which inherits the base stadium model, with additions of conference and division
 const NHLSchema = new Schema({
     ...stadiumBaseSchema.obj,
     conference: {
@@ -14,6 +14,7 @@ const NHLSchema = new Schema({
     }
 });
 
+// Create NHL model and export
 const NHLModel = model("NHL", NHLSchema);
 
 module.exports = { NHLSchema, NHLModel };

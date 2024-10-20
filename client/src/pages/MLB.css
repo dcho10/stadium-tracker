@@ -257,20 +257,14 @@
     text-align: center;
 }
 
-@media (max-width: 1024px) {
-    .nba-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .nba-container {
+@media (max-width: 890px) {
+    .mlb-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 480px) {
-    .nba-container {
+@media (max-width: 590px) {
+    .mlb-container {
         grid-template-columns: 1fr; 
     }
 }

@@ -1,3 +1,4 @@
+// Set up models
 const User = require("./User");
 const { MLBModel } = require("./baseballStadiums");
 const { NBAModel } = require("./basketballStadiums");

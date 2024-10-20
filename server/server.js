@@ -1,12 +1,13 @@
+// Set up imports
 const express = require("express");
 const { ApolloServer } = require("@apollo/server");
 const { expressMiddleware } = require("@apollo/server/express4");
 const path = require("path");
 const { authMiddleware } = require ("./utils/auth");
-
 const { typeDefs, resolvers } = require("./schemas");
 const db = require ("./config/connection");
 
+// Set up port for localhost and Apollo Server
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
@@ -14,6 +15,7 @@ const server = new ApolloServer({
     resolvers,
 })
 
+// Start up Apollo Server
 const startApolloServer = async () => {
     await server.start();
 
@@ -32,6 +34,7 @@ const startApolloServer = async () => {
         })
     }
 
+    // Access to GraphQL
     db.once("open", () => {
         app.listen(PORT, () => {
             console.log(`API Server running on ${PORT}!`);

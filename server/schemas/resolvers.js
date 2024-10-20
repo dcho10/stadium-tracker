@@ -2,8 +2,10 @@ const { User, MLBModel, NBAModel, NFLModel, NHLModel } = require("../models")
 const bcrypt = require("bcrypt");
 const { signToken } = require("../utils/auth");
 
+// Set up resolvers queries and mutations
 const resolvers = {
     Query: {
+        // Get all users and their visited stadiums
         users: async () => {
             return User.find()
             .populate("baseballStadiums")
@@ -11,6 +13,7 @@ const resolvers = {
             .populate("footballStadiums")
             .populate("hockeyStadiums")
         },
+        // Get single user based on the ID and their visited stadiums
         user: async (parent, { userId }) => {
             return User.findById({ _id: userId })
             .populate("baseballStadiums")
@@ -18,6 +21,7 @@ const resolvers = {
             .populate("footballStadiums")
             .populate("hockeyStadiums")
         },
+        // Get each respective league's stadiums
         mlbStadiums: async () => {
             return MLBModel.find();
         },
@@ -33,11 +37,18 @@ const resolvers = {
     },
 
     Mutation: {
+        // addUser requires firstName, lastName, email, password as values, create a token for the user once account created
         addUser: async (parent, {firstName, lastName, email, password }) => {
+            if (!firstName || !lastName || !email || !password) {
+                throw new Error("Please fill in all required fields.")
+            }
+
             const user = await User.create({ firstName, lastName, email, password });
             const token = signToken(user);
+
             return { token, user }
         },
+        // updateUser to update user information
         updateUser: async (parent, { userId, firstName, lastName, email, password }) => {
             const updatedInfo = {};
             if (firstName) updatedInfo.firstName = firstName;
@@ -47,6 +58,7 @@ const resolvers = {
             
             return User.findByIdAndUpdate(userId, updatedInfo, { new: true })
         },
+        // login checks the user's email, verifies if that user exists and if the passsword is correct
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
             
@@ -65,6 +77,7 @@ const resolvers = {
 
             return { token, user };
         },
+        // addMLBVisit adds a visited MLB stadium, checks to see if user and/or stadium exists, if both pass then the stadium will be marked as visited along with the date visited
         addMLBVisit: async (parent, { userId, stadiumId, dateVisited }) => {
             try {
                 const stadium = await MLBModel.findById(stadiumId);
@@ -98,6 +111,7 @@ const resolvers = {
                 throw new Error('Failed to add MLB visit');
             }
         },
+        // addNFLVisit adds a visited MLB stadium, checks to see if user and/or stadium exists, if both pass then the stadium will be marked as visited along with the date visited
         addNFLVisit: async (parent, { userId, stadiumId, dateVisited }) => {
             try {
                 const stadium = await NFLModel.findById(stadiumId);
@@ -126,6 +140,7 @@ const resolvers = {
                 throw new Error('Failed to add NF: visit');
             }
         },
+        // addNBAVisit adds a visited MLB stadium, checks to see if user and/or stadium exists, if both pass then the stadium will be marked as visited along with the date visited
         addNBAVisit: async (parent, { userId, stadiumId, dateVisited }) => {
             try {
                 const stadium = await NBAModel.findById(stadiumId);
@@ -154,6 +169,7 @@ const resolvers = {
                 throw new Error('Failed to add NBA visit');
             }
         },
+        // addNHLVisit adds a visited MLB stadium, checks to see if user and/or stadium exists, if both pass then the stadium will be marked as visited along with the date visited
         addNHLVisit: async (parent, { userId, stadiumId, dateVisited }) => {
             try {
                 const stadium = await NHLModel.findById(stadiumId);
@@ -182,6 +198,7 @@ const resolvers = {
                 throw new Error('Failed to add NHL visit');
             }
         },
+        // editMLBVisit searches for the userId of the user that is updating a visit, and edit the date that they visited
         editMLBVisit: async (parent, { userId, stadiumId, dateVisited }) => {
             try {
                 const updateVisit = await User.findOneAndUpdate(
@@ -199,6 +216,7 @@ const resolvers = {
                 throw new Error("Failed to update MLB visit");
             }
         },
+        // editNBAVisit searches for the userId of the user that is updating a visit, and edit the date that they visited
         editNBAVisit: async (parent, { userId, stadiumId, dateVisited }) => {
             try {
                 const updateVisit = await User.findOneAndUpdate(
@@ -216,6 +234,7 @@ const resolvers = {
                 throw new Error("Failed to update NBA visit");
             }
         },
+        // editNFLVisit searches for the userId of the user that is updating a visit, and edit the date that they visited
         editNFLVisit: async (parent, { userId, stadiumId, dateVisited }) => {
             try {
                 const updateVisit = await User.findOneAndUpdate(
@@ -233,6 +252,7 @@ const resolvers = {
                 throw new Error("Failed to update NFL visit");
             }
         },
+        // editNHLVisit searches for the userId of the user that is updating a visit, and edit the date that they visited
         editNHLVisit: async (parent, { userId, stadiumId, dateVisited }) => {
             try {
                 const updateVisit = await User.findOneAndUpdate(
@@ -250,6 +270,7 @@ const resolvers = {
                 throw new Error("Failed to update NHL visit");
             }
         },
+        // deleteMLBVisit will search the userId of the user that is deleting a visit, and delete the visit 
         deleteMLBVisit: async (parent, { userId, stadiumId }) => {
             try {
               const updatedUser = await User.findByIdAndUpdate(
@@ -272,6 +293,7 @@ const resolvers = {
               throw new Error("Failed to delete MLB visit");
             }
         },
+        // deleteNFLVisit will search the userId of the user that is deleting a visit, and delete the visit 
         deleteNFLVisit: async (parent, { userId, stadiumId }) => {
             try {
               const updatedUser = await User.findByIdAndUpdate(
@@ -294,6 +316,7 @@ const resolvers = {
               throw new Error("Failed to delete MLB visit");
             }
         },
+        // deleteNBAVIsit will search the userId of the user that is deleting a visit, and delete the visit 
         deleteNBAVisit: async (parent, { userId, stadiumId }) => {
             try {
               const updatedUser = await User.findByIdAndUpdate(
@@ -316,6 +339,7 @@ const resolvers = {
               throw new Error("Failed to delete MLB visit");
             }
         },
+        // deleteNHLVisit will search the userId of the user that is deleting a visit, and delete the visit 
         deleteNHLVisit: async (parent, { userId, stadiumId }) => {
             try {
               const updatedUser = await User.findByIdAndUpdate(

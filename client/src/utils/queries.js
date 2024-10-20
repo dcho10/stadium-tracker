@@ -1,5 +1,7 @@
+// Set up import
 import { gql } from "@apollo/client"
 
+// Front-end query user
 export const QUERY_USER = gql`
   query User($userId: ID!) {
     user(userId: $userId) {
@@ -44,6 +46,7 @@ export const QUERY_USER = gql`
   }
 `
 
+// Front-end MLB stadium query
 export const QUERY_MLB = gql `
   query mlbStadiums {
       mlbStadiums {
@@ -57,6 +60,7 @@ export const QUERY_MLB = gql `
   }
 `
 
+// Front-end NBA stadium query
 export const QUERY_NBA = gql `
   query nbaStadiums {
     nbaStadiums {
@@ -70,6 +74,7 @@ export const QUERY_NBA = gql `
   }
 `
 
+// Front-end NFL stadium query
 export const QUERY_NFL = gql `
   query nflStadiums {
     nflStadiums {
@@ -84,6 +89,7 @@ export const QUERY_NFL = gql `
   }
 `
 
+// Front-end NHL stadium query
 export const QUERY_NHL = gql `
   query nhlStadiums {
     nhlStadiums {

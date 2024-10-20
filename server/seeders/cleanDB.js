@@ -1,6 +1,7 @@
 const models = require("../models");
 const db = require("../config/connection");
 
+// Clean the database of any data that was added in and not part of the original seeds and re-seed the database
 module.exports = async (modelName, collectionName) => {
     try {
         if (!models[modelName]) {

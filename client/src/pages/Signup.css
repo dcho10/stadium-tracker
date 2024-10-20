@@ -9,6 +9,11 @@
 .signup-form, .login-form .signup-form p, .login-form p {
     color: var(--black);
     text-shadow: 1px 1px 1px var(--white);
+    text-align: center;
+}
+
+.signup-form p, .login-form p {
+    opacity: 0.5;
 }
 
 .signup-form h1, .login-form h1 {
