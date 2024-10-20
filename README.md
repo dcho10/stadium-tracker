@@ -41,7 +41,7 @@ Profile Page: ![profile](image-5.png)
 
 The following installations were used:
 
-Back-end:
+## Back-end:
 
     "dependencies": {
         "@apollo/server": "^4.7.1",
@@ -57,7 +57,8 @@ Back-end:
         "nodemon": "^2.0.3"
     }
 
-Front-end:
+
+## Front-end:
 
   "dependencies": {
     "@apollo/client": "^3.7.14",
