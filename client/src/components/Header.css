@@ -34,6 +34,8 @@ h1 {
     position: relative;
 }
 
+/* header hover from: https://codepen.io/team/css-tricks/pen/xxPOgmZ */
+
 .header-links a::before, .header-links button::before {
     content: '';
     position: absolute;

@@ -16,6 +16,8 @@ Some challenges I experienced throughout development include:
 
 ## Table of Contents
 
+  [Images](#images)
+
   [Installation](#installation)
 
   [Credits](#credits)
@@ -26,11 +28,21 @@ Some challenges I experienced throughout development include:
 
   [Contact](#contact)
 
+## Images 
+
+Home Page: ![home page](image.png)
+Sign Up: ![sign up](image-1.png)
+Login: ![log in](image-2.png)
+Welcome: ![welcome](image-3.png)
+Sample League Page (NFL): ![nfl page](image-4.png)
+Profile Page: ![profile](image-5.png)
+
 ## Installation 
 
 The following installations were used:
 
 Back-end:
+
     "dependencies": {
         "@apollo/server": "^4.7.1",
         "apollo-server": "^3.13.0",
@@ -46,6 +58,7 @@ Back-end:
     }
 
 Front-end:
+
   "dependencies": {
     "@apollo/client": "^3.7.14",
     "graphql": "^16.6.0",
@@ -72,6 +85,7 @@ Front-end:
 
 Credits include: 
 
+- Header link hover from: https://codepen.io/team/css-tricks/pen/xxPOgmZ
 - Home screen buttons from: https://codepen.io/konradwax/pen/woPNqJ
 - Login and signup form from: https://codepen.io/swapnet/pen/QWwPVwE
 - Welcome page icons from: https://codepen.io/ephs23/pen/NeQZGx
