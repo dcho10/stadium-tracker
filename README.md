@@ -42,7 +42,7 @@ Profile Page: ![profile](image-5.png)
 The following installations were used:
 
 ## Back-end:
-
+```
     "dependencies": {
         "@apollo/server": "^4.7.1",
         "apollo-server": "^3.13.0",
@@ -59,7 +59,7 @@ The following installations were used:
 
 
 ## Front-end:
-
+```
   "dependencies": {
     "@apollo/client": "^3.7.14",
     "graphql": "^16.6.0",
@@ -84,7 +84,7 @@ The following installations were used:
 
 ## Credits
 
-Credits include: 
+## Credits include: 
 
 - Header link hover from: https://codepen.io/team/css-tricks/pen/xxPOgmZ
 - Home screen buttons from: https://codepen.io/konradwax/pen/woPNqJ
@@ -95,26 +95,26 @@ Credits include:
 
 ## Frequently Asked Questions (FAQ)
 
-1. How was your app created?
+## 1. How was your app created?
 
 Visitour was created using a MERN stack. MongoDB for the database, Express.js to manager servers, React for front-end design, and Node.js to execute the server side.
 
-2. What was your inspiration behind creating the app?
+## 2. What was your inspiration behind creating the app?
 
 The inspiration behind this project was from a trip where I went and visited 4 Major League Baseball stadiums in 5 days, and while I was able to create and save a lot of memories from that trip, I want to be able to track and log these visits in an app! One day, I want to be able to visit all 30 Major League Baseball Stadiums!
 
-3. Are there any future developments for the app?
+## 3. Are there any future developments for the app?
 
 Yes! There are many future developments that the app can undertake.
 
-Short-term developments include: 
+## Short-term developments include: 
 - Users will be able to read about the stadium (where it is located, the history behind the stadium - when it was built, etc.)
 - A counter that will update the amount of stadiums they have visited per league
 - Adding notes or comments to document their experiences at the stadium
 - Email functionality so users can receive emails during account creation process
 - Password reset functionality
 
-Long-term developments include: 
+## Long-term developments include: 
 - Creation of AI to help guide users on recommendations for visits based on the user's patterns
 - Tracking the number of times a person has visited a stadium
 - Tracking the number of visitors a stadium receives
