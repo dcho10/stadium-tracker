@@ -1,3 +1,7 @@
+const fs = require('fs');
+console.log(fs.readdirSync(__dirname)); 
+
+
 // Set up imports
 const express = require("express");
 const { ApolloServer } = require("@apollo/server");
