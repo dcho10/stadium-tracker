@@ -19,6 +19,7 @@
         "graphql": "^16.6.0",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^8.0.0",
+        "semver": "^7.6.3",
         "stack": "^0.1.0"
     },
     "devDependencies": {
