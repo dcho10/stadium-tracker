@@ -1,7 +1,8 @@
 const { GraphQLError } = require("graphql");
 const jwt = require("jsonwebtoken");
+require('dotenv').config();
+const secret = process.env.JWT_SECRET;
 
-const secret = 'mysecretssshhhhhhh';
 const expiration = '200h';
 
 module.exports = {
@@ -10,9 +11,20 @@ module.exports = {
             code: "UNAUTHENTICATED",
         },
     }),
-    // Token for when the user signs in (found in payload) - token will contain email, first name, last name and user, and includes expiration time
+
+    // Token for when the user signs in
     signToken: function ({ email, firstName, lastName, _id }) {
         const payload = { email, firstName, lastName, _id };
-        return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+        try {
+            // Explicitly define the algorithm you are using
+            return jwt.sign({ data: payload }, secret, { expiresIn: expiration, algorithm: 'HS256' });
+        } catch (error) {
+            console.error("Error signing token:", error);
+            throw new GraphQLError("Failed to sign token", {
+                extensions: {
+                    code: "INTERNAL_SERVER_ERROR",
+                },
+            });
+        }
     },
 };
