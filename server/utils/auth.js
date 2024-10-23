@@ -1,9 +1,9 @@
 const { GraphQLError } = require("graphql");
-const jwt = require("jsonwebtoken");
+const { SignJWT } = require('jose');
 require('dotenv').config();
-const secret = process.env.JWT_SECRET;
 
-const expiration = '200h';
+const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+const expiration = '720000000'; 
 
 module.exports = {
     AuthenticationError: new GraphQLError("Incorrect username or password, please try again.", {
@@ -13,11 +13,17 @@ module.exports = {
     }),
 
     // Token for when the user signs in
-    signToken: function ({ email, firstName, lastName, _id }) {
+    signToken: async function ({ email, firstName, lastName, _id }) {
         const payload = { email, firstName, lastName, _id };
         try {
-            // Explicitly define the algorithm you are using
-            return jwt.sign({ data: payload }, secret, { expiresIn: expiration, algorithm: 'HS256' });
+            // Sign the token using jose
+            const jwt = await new SignJWT({ data: payload })
+                .setProtectedHeader({ alg: 'HS256' }) // Algorithm is defined here
+                .setIssuedAt()
+                .setExpirationTime(expiration)
+                .sign(secret); // secret must be a Uint8Array
+
+            return jwt;
         } catch (error) {
             console.error("Error signing token:", error);
             throw new GraphQLError("Failed to sign token", {

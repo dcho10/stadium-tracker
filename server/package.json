@@ -17,7 +17,7 @@
         "dotenv": "^16.4.5",
         "express": "^4.21.1",
         "graphql": "^16.9.0",
-        "jsonwebtoken": "^9.0.2",
+        "jose": "^5.9.6",
         "mongoose": "^8.7.2",
         "semver": "^7.6.3",
         "stack": "^0.1.0"
