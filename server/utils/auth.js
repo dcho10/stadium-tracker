@@ -1,4 +1,6 @@
 const { GraphQLError } = require("graphql");
+const { SignJWT } = require('jose');
+require('dotenv').config();
 
 const secret = new TextEncoder().encode(process.env.JWT_SECRET);
 const expiration = '720000000'; 
@@ -16,10 +18,10 @@ module.exports = {
         try {
             // Sign the token using jose
             const jwt = await new SignJWT({ data: payload })
-                .setProtectedHeader({ alg: 'HS256' }) // Algorithm is defined here
+                .setProtectedHeader({ alg: 'HS256' })
                 .setIssuedAt()
                 .setExpirationTime(expiration)
-                .sign(secret); // secret must be a Uint8Array
+                .sign(secret);
 
             return jwt;
         } catch (error) {
