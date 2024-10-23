@@ -1,6 +1,5 @@
 const { GraphQLError } = require("graphql");
-const { SignJWT } = require('jose');
-require('dotenv').config();
+const { SignJWT } = require("jose");
 
 const secret = new TextEncoder().encode(process.env.JWT_SECRET);
 const expiration = '720000000'; 

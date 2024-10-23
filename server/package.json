@@ -1,0 +1,10 @@
+{
+    "name": "stadium-tracker",
+    "description": "visitour",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {
+        "jose": "^5.9.6"
+    }
+}
