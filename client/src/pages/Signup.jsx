@@ -55,7 +55,7 @@ export default function Signup() {
                     <input type="text" placeholder="First Name*" name="firstName" value={formState.firstName} onChange={handleChange}></input>
                 </label>
                 <label>
-                    <input type="text" placeholder="Last Name*" name="lastName" value={formState.lastName} onChange={handleChange}></input>
+                    <input type="text" placeholder="Last Name" name="lastName" value={formState.lastName} onChange={handleChange}></input>
                 </label>
                 <label>
                     <input type="text" placeholder="Email*" name="email" value={formState.email} onChange={handleChange}></input>

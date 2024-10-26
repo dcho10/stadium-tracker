@@ -38,15 +38,16 @@ const resolvers = {
 
     Mutation: {
         // addUser requires firstName, lastName, email, password as values, create a token for the user once account created
-        addUser: async (parent, {firstName, lastName, email, password }) => {
-            if (!firstName || !lastName || !email || !password) {
-                throw new Error("Please fill in all required fields.")
+        addUser: async (parent, { firstName, lastName, email, password }) => {
+            if (!firstName || !email || !password) {
+                throw new Error("Please fill in all required fields.");
             }
 
             const user = await User.create({ firstName, lastName, email, password });
-            const token = signToken(user);
+            
+            const token = await signToken(user);
 
-            return { token, user }
+            return { token, user };
         },
         // updateUser to update user information
         updateUser: async (parent, { userId, firstName, lastName, email, password }) => {
@@ -63,17 +64,17 @@ const resolvers = {
             const user = await User.findOne({ email });
             
             if (!user) {
-                throw new Error("Incorrect email or password, please try again.")
+                throw new Error("Incorrect email or password, please try again.");
             }
-            
+
             const correctPass = await user.isCorrectPassword(password);
             
             if (!correctPass) {
-                throw new Error("Incorrect email or password, please try again.")
+                throw new Error("Incorrect email or password, please try again.");
             }
 
-            console.log(user);
-            const token = signToken(user);
+            // Await the token signing process
+            const token = await signToken(user);
 
             return { token, user };
         },

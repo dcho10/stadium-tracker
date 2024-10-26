@@ -3,7 +3,7 @@ const { SignJWT } = require("jose");
 require("dotenv").config();
 
 const secret = new TextEncoder().encode(process.env.JWT_SECRET);
-const expiration = '720000000'; 
+const expiration = '1d'; 
 
 module.exports = {
     AuthenticationError: new GraphQLError("Incorrect username or password, please try again.", {
