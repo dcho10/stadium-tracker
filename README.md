@@ -1,5 +1,7 @@
 # VISITOUR
 
+## Link to App: https://visitour-a5983596121a.herokuapp.com/
+
 ## Description
 
 Welcome to Visitour, visitor! Visitour was designed to allow users to track which sports stadiums they have visited amongst various sports leagues, mainly the National Football League (NFL), National Basketball Association (NBA), Major League Baseball (MLB), and National Hockey League (NHL). 
@@ -43,19 +45,20 @@ The following installations were used:
 
 ### Back-end:
 ```
-    "dependencies": {
-        "@apollo/server": "^4.7.1",
-        "apollo-server": "^3.13.0",
-        "bcrypt": "^5.0.0",
-        "express": "^4.17.2",
-        "graphql": "^16.6.0",
-        "jsonwebtoken": "^8.5.1",
-        "mongoose": "^8.0.0",
-        "stack": "^0.1.0"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.3"
-    }
+  "dependencies": {
+    "@apollo/server": "^4.11.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "graphql": "^16.9.0",
+    "jose": "^5.9.6",
+    "mongoose": "^8.7.2",
+    "semver": "^7.6.3",
+    "stack": "^0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 ```
 
 ### Front-end:
